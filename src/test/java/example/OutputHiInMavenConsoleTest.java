@@ -9,5 +9,6 @@ public class OutputHiInMavenConsoleTest {
     @Test
     public void testOutputHi() {
         assertEquals("Привет!", OutputHiInMavenConsole.getOutputHi());
+        System.out.println("Привет!");
     }
 }
