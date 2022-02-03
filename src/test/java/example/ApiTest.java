@@ -1,8 +1,5 @@
 package example;
 
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
 import example.trello.Board;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -20,11 +17,10 @@ import static io.restassured.RestAssured.given;
 public class ApiTest {
     @BeforeClass
     public static void prepare() throws IOException {
-
-        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
+        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://trello.com/login")
+                .setBaseUri("https://trello.com/")
                 .addHeader("api_login", "api_password")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
