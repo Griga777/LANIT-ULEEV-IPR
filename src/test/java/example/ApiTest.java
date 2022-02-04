@@ -17,11 +17,12 @@ import static io.restassured.RestAssured.given;
 public class ApiTest {
     @BeforeClass
     public static void prepare() throws IOException {
-        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
+        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://trello.com/")
+                .setBaseUri("https://trello.com/login/")
                 .addHeader("api_login", "api_password")
+                .setBaseUri("https://trello.com/")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
@@ -53,11 +54,7 @@ public class ApiTest {
                         .as(Board.class);
         Assert.assertEquals(actual.getName(), board.getName());
 
-//        HttpResponse<String> response = Unirest.post("https://api.trello.com/1/boards/")
-//                .queryString("name", name)
-//                .asString();
-//
-//        System.out.println(response.getBody());
+
     }
 
 }
