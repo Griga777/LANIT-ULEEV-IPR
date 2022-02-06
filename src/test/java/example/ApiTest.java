@@ -22,7 +22,6 @@ public class ApiTest {
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("https://api.trello.com/")
                 .addHeader("key", "token")
-                .setBaseUri("https://trello.com/")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
