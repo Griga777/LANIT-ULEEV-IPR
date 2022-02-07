@@ -19,11 +19,11 @@ import static io.restassured.RestAssured.given;
 public class ApiTest {
     @BeforeClass
     public static void prepare() throws IOException {
-        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
+//        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("https://api.trello.com/")
-                .addHeader("key", "token")
+                .addHeader("uleev777@yandex.ru", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
