@@ -1,4 +1,4 @@
-package example.trello;
+package example.trello.boards;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
@@ -7,9 +7,6 @@ public class Prefs{
 
 	@SerializedName("backgroundBrightness")
 	private String backgroundBrightness;
-
-	@SerializedName("backgroundColor")
-	private String backgroundColor;
 
 	@SerializedName("comments")
 	private String comments;
@@ -24,7 +21,7 @@ public class Prefs{
 	private boolean hideVotes;
 
 	@SerializedName("backgroundImage")
-	private Object backgroundImage;
+	private String backgroundImage;
 
 	@SerializedName("canBeOrg")
 	private boolean canBeOrg;
@@ -38,9 +35,6 @@ public class Prefs{
 	@SerializedName("calendarFeedEnabled")
 	private boolean calendarFeedEnabled;
 
-	@SerializedName("hiddenPluginBoardButtons")
-	private List<Object> hiddenPluginBoardButtons;
-
 	@SerializedName("backgroundTile")
 	private boolean backgroundTile;
 
@@ -51,7 +45,7 @@ public class Prefs{
 	private boolean canBePrivate;
 
 	@SerializedName("backgroundImageScaled")
-	private Object backgroundImageScaled;
+	private List<BackgroundImageScaledItem> backgroundImageScaled;
 
 	@SerializedName("permissionLevel")
 	private String permissionLevel;
@@ -61,9 +55,6 @@ public class Prefs{
 
 	@SerializedName("canInvite")
 	private boolean canInvite;
-
-	@SerializedName("invitations")
-	private String invitations;
 
 	@SerializedName("isTemplate")
 	private boolean isTemplate;
@@ -83,14 +74,6 @@ public class Prefs{
 
 	public String getBackgroundBrightness(){
 		return backgroundBrightness;
-	}
-
-	public void setBackgroundColor(String backgroundColor){
-		this.backgroundColor = backgroundColor;
-	}
-
-	public String getBackgroundColor(){
-		return backgroundColor;
 	}
 
 	public void setComments(String comments){
@@ -125,11 +108,11 @@ public class Prefs{
 		return hideVotes;
 	}
 
-	public void setBackgroundImage(Object backgroundImage){
+	public void setBackgroundImage(String backgroundImage){
 		this.backgroundImage = backgroundImage;
 	}
 
-	public Object getBackgroundImage(){
+	public String getBackgroundImage(){
 		return backgroundImage;
 	}
 
@@ -165,14 +148,6 @@ public class Prefs{
 		return calendarFeedEnabled;
 	}
 
-	public void setHiddenPluginBoardButtons(List<Object> hiddenPluginBoardButtons){
-		this.hiddenPluginBoardButtons = hiddenPluginBoardButtons;
-	}
-
-	public List<Object> getHiddenPluginBoardButtons(){
-		return hiddenPluginBoardButtons;
-	}
-
 	public void setBackgroundTile(boolean backgroundTile){
 		this.backgroundTile = backgroundTile;
 	}
@@ -197,11 +172,11 @@ public class Prefs{
 		return canBePrivate;
 	}
 
-	public void setBackgroundImageScaled(Object backgroundImageScaled){
+	public void setBackgroundImageScaled(List<BackgroundImageScaledItem> backgroundImageScaled){
 		this.backgroundImageScaled = backgroundImageScaled;
 	}
 
-	public Object getBackgroundImageScaled(){
+	public List<BackgroundImageScaledItem> getBackgroundImageScaled(){
 		return backgroundImageScaled;
 	}
 
@@ -227,14 +202,6 @@ public class Prefs{
 
 	public boolean isCanInvite(){
 		return canInvite;
-	}
-
-	public void setInvitations(String invitations){
-		this.invitations = invitations;
-	}
-
-	public String getInvitations(){
-		return invitations;
 	}
 
 	public void setIsTemplate(boolean isTemplate){
@@ -274,7 +241,6 @@ public class Prefs{
 		return 
 			"Prefs{" + 
 			"backgroundBrightness = '" + backgroundBrightness + '\'' + 
-			",backgroundColor = '" + backgroundColor + '\'' + 
 			",comments = '" + comments + '\'' + 
 			",backgroundTopColor = '" + backgroundTopColor + '\'' + 
 			",canBeEnterprise = '" + canBeEnterprise + '\'' + 
@@ -284,7 +250,6 @@ public class Prefs{
 			",backgroundBottomColor = '" + backgroundBottomColor + '\'' + 
 			",voting = '" + voting + '\'' + 
 			",calendarFeedEnabled = '" + calendarFeedEnabled + '\'' + 
-			",hiddenPluginBoardButtons = '" + hiddenPluginBoardButtons + '\'' + 
 			",backgroundTile = '" + backgroundTile + '\'' + 
 			",canBePublic = '" + canBePublic + '\'' + 
 			",canBePrivate = '" + canBePrivate + '\'' + 
@@ -292,7 +257,6 @@ public class Prefs{
 			",permissionLevel = '" + permissionLevel + '\'' + 
 			",cardAging = '" + cardAging + '\'' + 
 			",canInvite = '" + canInvite + '\'' + 
-			",invitations = '" + invitations + '\'' + 
 			",isTemplate = '" + isTemplate + '\'' + 
 			",background = '" + background + '\'' + 
 			",cardCovers = '" + cardCovers + '\'' + 

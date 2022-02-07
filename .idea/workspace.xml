@@ -5,6 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/Attachments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/BackgroundImageScaledItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/Limits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/PerBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Attachments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/AttachmentsByType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Badges.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Cover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/DescData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Emoji.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/IdChecklistsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/IdLabelsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Limits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/PerBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/cards/Trello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/trello/lists/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/LabelNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/LabelNames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/trello/lists/Limits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/trello/boards/Prefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +41,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -35,7 +60,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -49,7 +74,7 @@
       <recent name="example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.createBoard">
+  <component name="RunManager" selected="JUnit.ApiTest.createNewBoard">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="example.Main" />
       <module name="LANIT-ULEEV-IPR" />
@@ -79,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsoleServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.createNewBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
@@ -87,9 +112,10 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example.services" />
-      <option name="MAIN_CLASS_NAME" value="example.services.ConsoleServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="example" />
+      <option name="MAIN_CLASS_NAME" value="example.ApiTest" />
+      <option name="METHOD_NAME" value="createNewBoard" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.createNewBoard" />
         <item itemvalue="JUnit.ApiTest.createBoard" />
         <item itemvalue="JUnit.OutputHiInMavenConsoleTest.testOutputHi" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ConsoleServiceImplTest.OutputResultToConsole" />
-        <item itemvalue="JUnit.ConsoleServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644132506214</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2 задание в процессе">
+      <created>1644132557895</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1644132557895</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

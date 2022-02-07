@@ -1,4 +1,4 @@
-package example.trello;
+package example.trello.lists;
 
 import com.google.gson.annotations.SerializedName;
 
