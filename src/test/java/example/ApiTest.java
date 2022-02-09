@@ -1,6 +1,8 @@
 package example;
 
-import example.trello.Board;
+import example.trello.boards.Board;
+import example.trello.cards.Card;
+import example.trello.lists.List;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -10,18 +12,19 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     @BeforeClass
-    public static void prepare() throws IOException {
-        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
+    public static void prepare() {
+//        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://trello.com/")
-                .addHeader("api_login", "api_password")
+                .setBaseUri("https://api.trello.com/")
+                .addHeader("key", "ca92798ed22edd169506048c77755169")
+                .addHeader("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
@@ -30,10 +33,10 @@ public class ApiTest {
     }
 
     @Test
-    public void createBoard() {
+    public void createNewBoard() {
         Board board = new Board();
-        String name = "IPR_ULEEV";
-        board.setName(name);
+        String boardName = "IPR_ULEEV";
+        board.setName(boardName);
 
         given()
                 .body(board)
@@ -44,7 +47,7 @@ public class ApiTest {
 
         Board actual =
                 given()
-                        .pathParam("name", name)
+                        .pathParam("name", boardName)
                         .when()
                         .get("/1/boards/{name}")
                         .then()
@@ -52,12 +55,56 @@ public class ApiTest {
                         .extract().body()
                         .as(Board.class);
         Assert.assertEquals(actual.getName(), board.getName());
+    }
 
-//        HttpResponse<String> response = Unirest.post("https://api.trello.com/1/boards/")
-//                .queryString("name", name)
-//                .asString();
-//
-//        System.out.println(response.getBody());
+    @Test
+    public void createNewList() {
+        List list = new List();
+        String listName = "Backlog";
+        list.setName(listName);
+
+        given()
+                .body(list)
+                .when()
+                .post("/1/lists/")
+                .then()
+                .statusCode(200);
+
+        List actual =
+                given()
+                        .pathParam("name", listName)
+                        .when()
+                        .get("/1/lists/{name}")
+                        .then()
+                        .statusCode(200)
+                        .extract().body()
+                        .as(List.class);
+        Assert.assertEquals(actual.getName(), list.getName());
+    }
+
+    @Test
+    public void createNewCard() {
+        Card card = new Card();
+        String cardName = "Карточка для изучения API";
+        card.setName(cardName);
+
+        given()
+                .body(card)
+                .when()
+                .post("/1/cards/")
+                .then()
+                .statusCode(200);
+
+        Card actual =
+                given()
+                        .pathParam("name", cardName)
+                        .when()
+                        .get("/1/cards/{name}")
+                        .then()
+                        .statusCode(200)
+                        .extract().body()
+                        .as(Card.class);
+        Assert.assertEquals(actual.getName(), card.getName());
     }
 
 }
