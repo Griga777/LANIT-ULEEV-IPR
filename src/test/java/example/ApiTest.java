@@ -12,18 +12,19 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     @BeforeClass
-    public static void prepare() throws IOException {
+    public static void prepare() {
 //        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("https://api.trello.com/")
-                .addHeader("uleev777@yandex.ru", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
+                .addHeader("key", "ca92798ed22edd169506048c77755169")
+                .addHeader("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
