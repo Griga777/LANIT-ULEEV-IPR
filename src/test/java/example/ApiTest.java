@@ -3,6 +3,7 @@ package example;
 import example.trello.boards.Board;
 import example.trello.cards.Card;
 import example.trello.lists.List;
+import example.utils.RestWrapper;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -12,25 +13,38 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
+    private static RestWrapper api;
+
     @BeforeClass
     public static void prepare() {
-//        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my"));
+//        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
+        api = RestWrapper.loginAs("uleev777@yandex.ru", "iloveMasha*159");
 
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://api.trello.com/")
-                .addHeader("key", "ca92798ed22edd169506048c77755169")
-                .addHeader("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
-                .setAccept(ContentType.JSON)
-                .setContentType(ContentType.JSON)
-                .log(LogDetail.ALL)
-                .build();
-        RestAssured.filters(new ResponseLoggingFilter());
+//        RestAssured.requestSpecification = new RequestSpecBuilder()
+//                .setBaseUri("https://api.trello.com/")
+//                .addHeader("uleev777@yandex.ru", "myToken")
+//                .setAccept(ContentType.JSON)
+//                .setContentType(ContentType.JSON)
+//                .log(LogDetail.ALL)
+//                .build();
+//        RestAssured.filters(new ResponseLoggingFilter());
     }
+
+//    .parameter("user", "name")
+//.parameter("password", "some_password")
+//.get("login_endpoint")
+//.then().extract().response();
+//    String authToken = login_endpoint.getCookie("cookie name with auth token");```
+//
+//    Ну, а дальше подкладывать его в каждый запрос, можно вот так:
+//            ```RestAssured.requestSpecification = new RequestSpecBuilder().addHeader("auth header name", authToken).build();```
+//    в таком случае, при всех последующих запросах, будет использоваться этот auth token
 
     @Test
     public void createNewBoard() {
@@ -44,7 +58,6 @@ public class ApiTest {
                 .post("/1/boards/")
                 .then()
                 .statusCode(200);
-
         Board actual =
                 given()
                         .pathParam("name", boardName)
@@ -69,7 +82,6 @@ public class ApiTest {
                 .post("/1/lists/")
                 .then()
                 .statusCode(200);
-
         List actual =
                 given()
                         .pathParam("name", listName)
@@ -94,7 +106,6 @@ public class ApiTest {
                 .post("/1/cards/")
                 .then()
                 .statusCode(200);
-
         Card actual =
                 given()
                         .pathParam("name", cardName)
