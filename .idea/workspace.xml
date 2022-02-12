@@ -4,8 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="2 задание в процессе">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/OutputHiInMavenConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task1/OutputHiInMavenConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Attachments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/BackgroundImageScaledItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/BackgroundImageScaledItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/LabelNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/LabelNames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/PerBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/PerBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Attachments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/AttachmentsByType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/AttachmentsByType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Badges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Badges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Cover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/DescData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/DescData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Emoji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Emoji.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/IdChecklistsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/IdChecklistsItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/IdLabelsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/IdLabelsItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Limits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/PerBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/PerBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Trello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Trello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/lists/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/lists/Limits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/lists/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/lists/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/my.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/my.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/OutputHiInMavenConsoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task1Test/OutputHiInMavenConsoleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/utils/RestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/utils/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/UserLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +84,12 @@
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.*" />
+          <option name="PATTERN" value="example.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example" />
-      <option name="MAIN_CLASS_NAME" value="example.ApiTest" />
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,12 +99,12 @@
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.*" />
+          <option name="PATTERN" value="example.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example" />
-      <option name="MAIN_CLASS_NAME" value="example.ApiTest" />
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
       <option name="METHOD_NAME" value="createBoard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -87,12 +115,12 @@
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.*" />
+          <option name="PATTERN" value="example.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example" />
-      <option name="MAIN_CLASS_NAME" value="example.ApiTest" />
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
       <option name="METHOD_NAME" value="createNewBoard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -103,12 +131,12 @@
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.*" />
+          <option name="PATTERN" value="example.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example" />
-      <option name="MAIN_CLASS_NAME" value="example.ApiTest" />
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
       <option name="METHOD_NAME" value="createNewCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -119,12 +147,12 @@
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.*" />
+          <option name="PATTERN" value="example.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example" />
-      <option name="MAIN_CLASS_NAME" value="example.ApiTest" />
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
       <option name="METHOD_NAME" value="createNewList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -283,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644669412892</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="2 задание в процессе">
+      <created>1644669467357</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1644669467357</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
