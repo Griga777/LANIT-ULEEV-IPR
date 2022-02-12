@@ -5,41 +5,53 @@ import example.trello.cards.Card;
 import example.trello.lists.List;
 import example.utils.RestWrapper;
 import io.restassured.RestAssured;
+import io.restassured.authentication.OAuthSignature;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.http.Cookies;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
+    private static final String BASE_URL = "https://api.trello.com/";
+    private static RequestSpecification REQ_SPEC;
     private static RestWrapper api;
+    private static Cookies cookies;
 
     @BeforeClass
     public static void prepare() {
-//        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
-        api = RestWrapper.loginAs("uleev777@yandex.ru", "iloveMasha*159");
+//        api = RestWrapper.loginAs("uleev777@yandex.ru", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777");
 
-//        RestAssured.requestSpecification = new RequestSpecBuilder()
-//                .setBaseUri("https://api.trello.com/")
-//                .addHeader("uleev777@yandex.ru", "myToken")
-//                .setAccept(ContentType.JSON)
-//                .setContentType(ContentType.JSON)
-//                .log(LogDetail.ALL)
-//                .build();
-//        RestAssured.filters(new ResponseLoggingFilter());
+//        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
+//        RestAssured.baseURI = "https://api.trello.com/";
+//        RestAssured.basePath = "/login";
+//        RestAssured.authentication = RestAssured.basic("uleev777@yandex.ru", "iloveMasha*159");
+        RestAssured.requestSpecification = new RequestSpecBuilder()
+                .setBaseUri("https://api.trello.com/")
+                .addHeader("uleev777@yandex.ru", "myToken")
+                .setAccept(ContentType.JSON)
+                .setContentType(ContentType.JSON)
+                .log(LogDetail.ALL)
+                .build();
+        RestAssured.filters(new ResponseLoggingFilter());
     }
 
 //    .parameter("user", "name")
-//.parameter("password", "some_password")
-//.get("login_endpoint")
-//.then().extract().response();
+//    .parameter("password", "some_password")
+//    .get("login_endpoint")
+//    .then().extract().response();
 //    String authToken = login_endpoint.getCookie("cookie name with auth token");```
 //
 //    Ну, а дальше подкладывать его в каждый запрос, можно вот так:

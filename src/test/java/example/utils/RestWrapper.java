@@ -18,7 +18,6 @@ public class RestWrapper {
         REQ_SPEC = new RequestSpecBuilder()
                 .addCookies(cookies)
                 .setBaseUri("https://api.trello.com/")
-                .setBasePath("/users")
                 .setContentType(ContentType.JSON)
                 .build();
     }
