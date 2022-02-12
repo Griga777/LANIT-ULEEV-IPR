@@ -4,36 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="2 задание в процессе">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/OutputHiInMavenConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task1/OutputHiInMavenConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Attachments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/BackgroundImageScaledItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/BackgroundImageScaledItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/LabelNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/LabelNames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/PerBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/PerBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/boards/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Attachments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Attachments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/AttachmentsByType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/AttachmentsByType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Badges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Badges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Cover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/DescData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/DescData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Emoji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Emoji.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/IdChecklistsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/IdChecklistsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/IdLabelsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/IdLabelsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/PerBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/PerBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/cards/Trello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Trello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/lists/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/lists/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/trello/lists/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/lists/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/my.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/my.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/OutputHiInMavenConsoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task1Test/OutputHiInMavenConsoleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/utils/RestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/utils/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/OutputHiInMavenConsole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/Attachments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/BackgroundImageScaledItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/LabelNames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/PerBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/boards/Prefs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Attachments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/AttachmentsByType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Badges.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Cover.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/DescData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Emoji.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/IdChecklistsItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/IdLabelsItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/PerBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/cards/Trello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/lists/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/lists/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/my.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/my.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/ApiTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/OutputHiInMavenConsoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/utils/RestWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/utils/UserLogin.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -91,22 +94,6 @@
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiTest.createBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LANIT-ULEEV-IPR" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="example.task1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="example.task2Test" />
-      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="createBoard" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,13 +146,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OutputHiInMavenConsoleTest.testOutputHi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LANIT-ULEEV-IPR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.task1Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.task1Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task1Test.OutputHiInMavenConsoleTest" />
+      <option name="METHOD_NAME" value="testOutputHi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ApiTest.createNewBoard" />
+        <item itemvalue="JUnit.ApiTest.createNewList" />
+        <item itemvalue="JUnit.OutputHiInMavenConsoleTest.testOutputHi" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.ApiTest.createNewCard" />
-        <item itemvalue="JUnit.ApiTest.createNewList" />
-        <item itemvalue="JUnit.ApiTest.createBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644669467357</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="2 задание в процессе">
+      <created>1644672175973</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1644672175973</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -344,5 +354,66 @@
     <MESSAGE value="Убрал лишние зависимости" />
     <MESSAGE value="2 задание в процессе" />
     <option name="LAST_COMMIT_MESSAGE" value="2 задание в процессе" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

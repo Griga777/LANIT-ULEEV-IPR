@@ -1,35 +1,35 @@
 package example.task2Test.utils;
 
 public class UserLogin {
-    private String email;
-    private String password;
+    private String key;
+    private String token;
 
-    UserLogin(String email, String password) {
-        this.email = email;
-        this.password = password;
+    public UserLogin(String key, String token) {
+        this.key = key;
+        this.token = token;
     }
 
-    public String getEmail() {
-        return email;
+    public String getKey() {
+        return key;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setKey(String key) {
+        this.key = key;
     }
 
-    public String getPassword() {
-        return password;
+    public String getToken() {
+        return token;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setToken(String token) {
+        this.token = token;
     }
 
     @Override
     public String toString() {
         return "UserLogin{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
+                "key='" + key + '\'' +
+                ", token='" + token + '\'' +
                 '}';
     }
 }

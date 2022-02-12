@@ -18,27 +18,27 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
-    private static final String BASE_URL = "https://api.trello.com/";
+    private static final String BASE_URL = "https://api.trello.com";
     private static RequestSpecification REQ_SPEC;
     private static RestWrapper api;
     private static Cookies cookies;
 
     @BeforeClass
     public static void prepare() {
-//        api = RestWrapper.loginAs("uleev777@yandex.ru", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777");
+        api = RestWrapper.loginAs("ca92798ed22edd169506048c77755169", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777");
 
 //        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
 //        RestAssured.baseURI = "https://api.trello.com/";
 //        RestAssured.basePath = "/login";
 //        RestAssured.authentication = RestAssured.basic("uleev777@yandex.ru", "iloveMasha*159");
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://api.trello.com/")
-                .addHeader("uleev777@yandex.ru", "myToken")
-                .setAccept(ContentType.JSON)
-                .setContentType(ContentType.JSON)
-                .log(LogDetail.ALL)
-                .build();
-        RestAssured.filters(new ResponseLoggingFilter());
+//        RestAssured.requestSpecification = new RequestSpecBuilder()
+//                .setBaseUri("https://api.trello.com/")
+//                .addHeader("uleev777@yandex.ru", "myToken")
+//                .setAccept(ContentType.JSON)
+//                .setContentType(ContentType.JSON)
+//                .log(LogDetail.ALL)
+//                .build();
+//        RestAssured.filters(new ResponseLoggingFilter());
     }
 
     @Test
@@ -49,6 +49,7 @@ public class ApiTest {
 
         given()
                 .body(board)
+                .baseUri(BASE_URL)
                 .when()
                 .post("/1/boards/")
                 .then()
