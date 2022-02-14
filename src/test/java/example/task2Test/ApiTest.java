@@ -38,7 +38,6 @@ public class ApiTest {
 
         RequestSpecification requestSpec = new RequestSpecBuilder()
                 .setBaseUri("https://api.trello.com")
-//                .setBasePath("/login")
                 .addQueryParam("key", "ca92798ed22edd169506048c77755169")
                 .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
@@ -60,25 +59,25 @@ public class ApiTest {
     @Test
     public void createNewBoard() {
         Board board = new Board();
-        String boardName = "IPR_ULEEV";
-        int boardId;
-        board.setName(boardName);
+        String name = "IPR_ULEEV";
+        String id;
+        board.setName(name);
 
         given()
                 .body(board)
                 .when()
-                .post("/1/boards/")
+                .post("/1/boards")
                 .then()
-                .spec(responseSpec)
-                .extract().body()
-                .as(Board.class);
+                .statusCode(200)
+                .extract().jsonPath().getString("[0].id");
+        id = get().jsonPath().getString("[0].id");
         Board actual =
                 given()
-                        .pathParam("id", boardName)
+                        .pathParam("id", id)
                         .when()
                         .get("/1/boards/{id}")
                         .then()
-                        .spec(responseSpec)
+                        .statusCode(200)
                         .extract().body()
                         .as(Board.class);
         Assert.assertEquals(actual.getId(), board.getId());
