@@ -21,24 +21,24 @@ public class RestWrapper {
         REQ_SPEC = new RequestSpecBuilder()
                 .addCookies(cookies)
                 .setBaseUri(BASE_URL)
-//                .setBasePath("/users")
-                .setAccept(ContentType.JSON)
+//                .setBasePath("/uleev_grigoriy")
+//                .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
-                .log(LogDetail.ALL)
+//                .log(LogDetail.ALL)
                 .build();
-        RestAssured.filters(new ResponseLoggingFilter());
+//        RestAssured.filters(new ResponseLoggingFilter());
     }
 
     public static RestWrapper loginAs(String key, String token) {
         Cookies cookies = given()
                 .contentType(ContentType.JSON)
                 .baseUri(BASE_URL)
-//                .basePath("/login")
+                .basePath("/login")
                 .body(new UserLogin(key, token))
-                .post()
-//                .then().log().all()
-//                .extract().detailedCookies();
-                .getDetailedCookies();
+                .get()
+                .then().log().all()
+                .extract().detailedCookies();
+//                .getDetailedCookies();
 
         return new RestWrapper(cookies);
     }

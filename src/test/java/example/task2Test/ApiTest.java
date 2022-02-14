@@ -4,66 +4,84 @@ import example.task2.trello.boards.Board;
 import example.task2.trello.cards.Card;
 import example.task2.trello.lists.List;
 import example.task2Test.utils.RestWrapper;
+import example.task2Test.utils.UserLogin;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.http.Cookies;
 import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 
+import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.core.StringContains.containsString;
 
 public class ApiTest {
-    private static final String BASE_URL = "https://api.trello.com";
-    private static RequestSpecification REQ_SPEC;
     private static RestWrapper api;
-    private static Cookies cookies;
+    private static final String BASE_URL = "https://api.trello.com";
+    private RequestSpecification requestSpec;
+    private ResponseSpecification responseSpec;
 
     @BeforeClass
-    public static void prepare() {
-        api = RestWrapper.loginAs("ca92798ed22edd169506048c77755169", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777");
+    public static void prepareRequest() {
+//        api = RestWrapper.loginAs("ca92798ed22edd169506048c77755169",
+//                                  "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777");
 
 //        System.getProperties().load(ClassLoader.getSystemResourceAsStream("my.properties"));
-//        RestAssured.baseURI = "https://api.trello.com/";
-//        RestAssured.basePath = "/login";
-//        RestAssured.authentication = RestAssured.basic("uleev777@yandex.ru", "iloveMasha*159");
-//        RestAssured.requestSpecification = new RequestSpecBuilder()
-//                .setBaseUri("https://api.trello.com/")
-//                .addHeader("uleev777@yandex.ru", "myToken")
-//                .setAccept(ContentType.JSON)
-//                .setContentType(ContentType.JSON)
-//                .log(LogDetail.ALL)
-//                .build();
-//        RestAssured.filters(new ResponseLoggingFilter());
+
+        RequestSpecification requestSpec = new RequestSpecBuilder()
+                .setBaseUri("https://api.trello.com")
+//                .setBasePath("/login")
+                .addQueryParam("key", "ca92798ed22edd169506048c77755169")
+                .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
+                .setAccept(ContentType.JSON)
+                .setContentType(ContentType.JSON)
+                .log(LogDetail.ALL)
+                .build();
+        RestAssured.filters(new ResponseLoggingFilter());
+        RestAssured.requestSpecification = requestSpec;
+    }
+
+    public static void prepareResponse() {
+        ResponseSpecification responseSpec = new ResponseSpecBuilder()
+                .expectStatusCode(200)
+                .expectBody(containsString("success"))
+                .build();
+        RestAssured.responseSpecification = responseSpec;
     }
 
     @Test
     public void createNewBoard() {
         Board board = new Board();
         String boardName = "IPR_ULEEV";
+        int boardId;
         board.setName(boardName);
 
         given()
                 .body(board)
-                .baseUri(BASE_URL)
                 .when()
                 .post("/1/boards/")
                 .then()
-                .statusCode(200);
+                .spec(responseSpec)
+                .extract().body()
+                .as(Board.class);
         Board actual =
                 given()
-                        .pathParam("name", boardName)
+                        .pathParam("id", boardName)
                         .when()
-                        .get("/1/boards/{name}")
+                        .get("/1/boards/{id}")
                         .then()
-                        .statusCode(200)
+                        .spec(responseSpec)
                         .extract().body()
                         .as(Board.class);
-        Assert.assertEquals(actual.getName(), board.getName());
+        Assert.assertEquals(actual.getId(), board.getId());
     }
 
     @Test
