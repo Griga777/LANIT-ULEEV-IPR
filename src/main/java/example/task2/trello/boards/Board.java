@@ -5,10 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class Board{
 
 	@SerializedName("descData")
-	private String descData;
-
-	@SerializedName("idTags")
-	private String idTags;
+	private Object descData;
 
 	@SerializedName("pinned")
 	private boolean pinned;
@@ -19,32 +16,23 @@ public class Board{
 	@SerializedName("shortUrl")
 	private String shortUrl;
 
-	@SerializedName("dateLastActivity")
-	private String dateLastActivity;
+	@SerializedName("url")
+	private String url;
 
-	@SerializedName("datePluginDisable")
-	private String datePluginDisable;
+	@SerializedName("prefs")
+	private Prefs prefs;
 
-	@SerializedName("shortLink")
-	private String shortLink;
+	@SerializedName("idEnterprise")
+	private Object idEnterprise;
 
-	@SerializedName("memberships")
-	private String memberships;
-
-	@SerializedName("creationMethod")
-	private String creationMethod;
-
-	@SerializedName("subscribed")
-	private boolean subscribed;
-
-	@SerializedName("starred")
-	private boolean starred;
+	@SerializedName("name")
+	private String name;
 
 	@SerializedName("idOrganization")
 	private String idOrganization;
 
-	@SerializedName("dateLastView")
-	private String dateLastView;
+	@SerializedName("closed")
+	private boolean closed;
 
 	@SerializedName("id")
 	private String id;
@@ -52,50 +40,15 @@ public class Board{
 	@SerializedName("limits")
 	private Limits limits;
 
-	@SerializedName("powerUps")
-	private String powerUps;
-
-	@SerializedName("templateGallery")
-	private String templateGallery;
-
-	@SerializedName("url")
-	private String url;
-
-	@SerializedName("prefs")
-	private Prefs prefs;
-
-	@SerializedName("enterpriseOwned")
-	private boolean enterpriseOwned;
-
-	@SerializedName("ixUpdate")
-	private int ixUpdate;
-
-	@SerializedName("name")
-	private String name;
-
-	@SerializedName("closed")
-	private boolean closed;
-
-	@SerializedName("idMemberCreator")
-	private String idMemberCreator;
-
 	@SerializedName("desc")
 	private String desc;
 
-	public void setDescData(String descData){
+	public void setDescData(Object descData){
 		this.descData = descData;
 	}
 
-	public String getDescData(){
+	public Object getDescData(){
 		return descData;
-	}
-
-	public void setIdTags(String idTags){
-		this.idTags = idTags;
-	}
-
-	public String getIdTags(){
-		return idTags;
 	}
 
 	public void setPinned(boolean pinned){
@@ -122,60 +75,36 @@ public class Board{
 		return shortUrl;
 	}
 
-	public void setDateLastActivity(String dateLastActivity){
-		this.dateLastActivity = dateLastActivity;
+	public void setUrl(String url){
+		this.url = url;
 	}
 
-	public String getDateLastActivity(){
-		return dateLastActivity;
+	public String getUrl(){
+		return url;
 	}
 
-	public void setDatePluginDisable(String datePluginDisable){
-		this.datePluginDisable = datePluginDisable;
+	public void setPrefs(Prefs prefs){
+		this.prefs = prefs;
 	}
 
-	public String getDatePluginDisable(){
-		return datePluginDisable;
+	public Prefs getPrefs(){
+		return prefs;
 	}
 
-	public void setShortLink(String shortLink){
-		this.shortLink = shortLink;
+	public void setIdEnterprise(Object idEnterprise){
+		this.idEnterprise = idEnterprise;
 	}
 
-	public String getShortLink(){
-		return shortLink;
+	public Object getIdEnterprise(){
+		return idEnterprise;
 	}
 
-	public void setMemberships(String memberships){
-		this.memberships = memberships;
+	public void setName(String name){
+		this.name = name;
 	}
 
-	public String getMemberships(){
-		return memberships;
-	}
-
-	public void setCreationMethod(String creationMethod){
-		this.creationMethod = creationMethod;
-	}
-
-	public String getCreationMethod(){
-		return creationMethod;
-	}
-
-	public void setSubscribed(boolean subscribed){
-		this.subscribed = subscribed;
-	}
-
-	public boolean isSubscribed(){
-		return subscribed;
-	}
-
-	public void setStarred(boolean starred){
-		this.starred = starred;
-	}
-
-	public boolean isStarred(){
-		return starred;
+	public String getName(){
+		return name;
 	}
 
 	public void setIdOrganization(String idOrganization){
@@ -186,12 +115,12 @@ public class Board{
 		return idOrganization;
 	}
 
-	public void setDateLastView(String dateLastView){
-		this.dateLastView = dateLastView;
+	public void setClosed(boolean closed){
+		this.closed = closed;
 	}
 
-	public String getDateLastView(){
-		return dateLastView;
+	public boolean isClosed(){
+		return closed;
 	}
 
 	public void setId(String id){
@@ -210,78 +139,6 @@ public class Board{
 		return limits;
 	}
 
-	public void setPowerUps(String powerUps){
-		this.powerUps = powerUps;
-	}
-
-	public String getPowerUps(){
-		return powerUps;
-	}
-
-	public void setTemplateGallery(String templateGallery){
-		this.templateGallery = templateGallery;
-	}
-
-	public String getTemplateGallery(){
-		return templateGallery;
-	}
-
-	public void setUrl(String url){
-		this.url = url;
-	}
-
-	public String getUrl(){
-		return url;
-	}
-
-	public void setPrefs(Prefs prefs){
-		this.prefs = prefs;
-	}
-
-	public Prefs getPrefs(){
-		return prefs;
-	}
-
-	public void setEnterpriseOwned(boolean enterpriseOwned){
-		this.enterpriseOwned = enterpriseOwned;
-	}
-
-	public boolean isEnterpriseOwned(){
-		return enterpriseOwned;
-	}
-
-	public void setIxUpdate(int ixUpdate){
-		this.ixUpdate = ixUpdate;
-	}
-
-	public int getIxUpdate(){
-		return ixUpdate;
-	}
-
-	public void setName(String name){
-		this.name = name;
-	}
-
-	public String getName(){
-		return name;
-	}
-
-	public void setClosed(boolean closed){
-		this.closed = closed;
-	}
-
-	public boolean isClosed(){
-		return closed;
-	}
-
-	public void setIdMemberCreator(String idMemberCreator){
-		this.idMemberCreator = idMemberCreator;
-	}
-
-	public String getIdMemberCreator(){
-		return idMemberCreator;
-	}
-
 	public void setDesc(String desc){
 		this.desc = desc;
 	}
@@ -295,30 +152,17 @@ public class Board{
 		return 
 			"Board{" + 
 			"descData = '" + descData + '\'' + 
-			",idTags = '" + idTags + '\'' + 
 			",pinned = '" + pinned + '\'' + 
 			",labelNames = '" + labelNames + '\'' + 
 			",shortUrl = '" + shortUrl + '\'' + 
-			",dateLastActivity = '" + dateLastActivity + '\'' + 
-			",datePluginDisable = '" + datePluginDisable + '\'' + 
-			",shortLink = '" + shortLink + '\'' + 
-			",memberships = '" + memberships + '\'' + 
-			",creationMethod = '" + creationMethod + '\'' + 
-			",subscribed = '" + subscribed + '\'' + 
-			",starred = '" + starred + '\'' + 
-			",idOrganization = '" + idOrganization + '\'' + 
-			",dateLastView = '" + dateLastView + '\'' + 
-			",id = '" + id + '\'' + 
-			",limits = '" + limits + '\'' + 
-			",powerUps = '" + powerUps + '\'' + 
-			",templateGallery = '" + templateGallery + '\'' + 
 			",url = '" + url + '\'' + 
 			",prefs = '" + prefs + '\'' + 
-			",enterpriseOwned = '" + enterpriseOwned + '\'' + 
-			",ixUpdate = '" + ixUpdate + '\'' + 
+			",idEnterprise = '" + idEnterprise + '\'' + 
 			",name = '" + name + '\'' + 
+			",idOrganization = '" + idOrganization + '\'' + 
 			",closed = '" + closed + '\'' + 
-			",idMemberCreator = '" + idMemberCreator + '\'' + 
+			",id = '" + id + '\'' + 
+			",limits = '" + limits + '\'' + 
 			",desc = '" + desc + '\'' + 
 			"}";
 		}

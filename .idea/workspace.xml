@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Attachments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/BackgroundImageScaledItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/PerBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/LabelNames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/Prefs.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ExceptionHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,31 +363,6 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
           <line>42</line>
           <option name="timeStamp" value="14" />
@@ -386,31 +371,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
           <line>43</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
@@ -451,66 +411,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
           <line>39</line>
           <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="58" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.AssertionError" package="java.lang" />
