@@ -6,6 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="2 задание в процессе">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/my.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/ContentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/Header.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/Headers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/QueryParameter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/QueryParameters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/Resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/ServiceDomain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/user/TrelloUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/UserLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +325,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644956090233</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2 задание в процессе">
+      <created>1644956151104</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1644956151104</updated>
+    </task>
+    <task id="LOCAL-00025" summary="2 задание в процессе">
+      <created>1644956339147</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1644956339147</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -351,61 +378,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="38" />
