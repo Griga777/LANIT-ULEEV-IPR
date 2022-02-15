@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="2 задание в процессе">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Attachments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/BackgroundImageScaledItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/PerBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/LabelNames.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/trello/Prefs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ExceptionHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644688426821</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="2 задание в процессе">
+      <created>1644956090233</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1644956090233</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
