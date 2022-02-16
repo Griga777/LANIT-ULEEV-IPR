@@ -17,9 +17,9 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String BOARD_ID;
-    private static String LIST_ID;
-    private static String CARD_ID;
+    private static final String BOARD_ID = "620d422537d7226f7bda84af";
+    private static String LIST_ID = "620d4239df6eb980f7e88179";
+    private static String CARD_ID = "620d424fb9ad1b8f51cc701f";
 
     @BeforeClass
     public static void prepareRequest() {
@@ -38,6 +38,7 @@ public class ApiTest {
     public void createNewBoard() {
         Board board = new Board();
         String boardName = "IPR_ULEEV";
+        String idBoard;
         board.setName(boardName);
 
         Response boardCreation = given()
@@ -47,9 +48,9 @@ public class ApiTest {
                 .then()
                 .statusCode(200)
                 .extract().response();
-        BOARD_ID = boardCreation.path("id").toString();
+        idBoard = boardCreation.path("id").toString();
         Board actual = given()
-                .pathParam("id", BOARD_ID)
+                .pathParam("id", idBoard)
                 .when()
                 .get("/1/boards/{id}")
                 .then()
@@ -63,12 +64,11 @@ public class ApiTest {
     public void createNewList() {
         List list = new List();
         String listName = "Backlog";
-        String boardId = BOARD_ID;
         list.setName(listName);
 
         Response listCreation = given()
                 .queryParam("name", listName)
-                .queryParam("idBoard", boardId)
+                .queryParam("idBoard", BOARD_ID)
                 .when()
                 .post("/1/lists")
                 .then()
@@ -112,4 +112,29 @@ public class ApiTest {
         Assert.assertEquals(actual.getName(), card.getName());
     }
 
+    @Test
+    public void createAttachmentOnCard() {
+        Card card = new Card();
+        String cardName = "Карточка для изучения API";
+        card.setName(cardName);
+
+        Response cardCreation = given()
+                .queryParam("name", cardName)
+                .queryParam("idList", LIST_ID)
+                .when()
+                .post("/1/cards")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        CARD_ID = cardCreation.path("id").toString();
+        Card actual = given()
+                .pathParam("id", CARD_ID)
+                .when()
+                .get("/1/cards/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Card.class);
+        Assert.assertEquals(actual.getName(), card.getName());
+    }
 }
