@@ -16,14 +16,20 @@ public class Badges{
 	@SerializedName("dueComplete")
 	private boolean dueComplete;
 
+	@SerializedName("start")
+	private Object start;
+
 	@SerializedName("description")
 	private boolean description;
+
+	@SerializedName("checkItemsEarliestDue")
+	private Object checkItemsEarliestDue;
 
 	@SerializedName("subscribed")
 	private boolean subscribed;
 
 	@SerializedName("due")
-	private String due;
+	private Object due;
 
 	@SerializedName("viewingMemberVoted")
 	private boolean viewingMemberVoted;
@@ -75,12 +81,28 @@ public class Badges{
 		return dueComplete;
 	}
 
+	public void setStart(Object start){
+		this.start = start;
+	}
+
+	public Object getStart(){
+		return start;
+	}
+
 	public void setDescription(boolean description){
 		this.description = description;
 	}
 
 	public boolean isDescription(){
 		return description;
+	}
+
+	public void setCheckItemsEarliestDue(Object checkItemsEarliestDue){
+		this.checkItemsEarliestDue = checkItemsEarliestDue;
+	}
+
+	public Object getCheckItemsEarliestDue(){
+		return checkItemsEarliestDue;
 	}
 
 	public void setSubscribed(boolean subscribed){
@@ -91,11 +113,11 @@ public class Badges{
 		return subscribed;
 	}
 
-	public void setDue(String due){
+	public void setDue(Object due){
 		this.due = due;
 	}
 
-	public String getDue(){
+	public Object getDue(){
 		return due;
 	}
 
@@ -155,7 +177,9 @@ public class Badges{
 			",attachments = '" + attachments + '\'' + 
 			",attachmentsByType = '" + attachmentsByType + '\'' + 
 			",dueComplete = '" + dueComplete + '\'' + 
+			",start = '" + start + '\'' + 
 			",description = '" + description + '\'' + 
+			",checkItemsEarliestDue = '" + checkItemsEarliestDue + '\'' + 
 			",subscribed = '" + subscribed + '\'' + 
 			",due = '" + due + '\'' + 
 			",viewingMemberVoted = '" + viewingMemberVoted + '\'' + 

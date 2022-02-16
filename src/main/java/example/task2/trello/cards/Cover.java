@@ -5,25 +5,28 @@ import com.google.gson.annotations.SerializedName;
 public class Cover{
 
 	@SerializedName("idUploadedBackground")
-	private boolean idUploadedBackground;
+	private Object idUploadedBackground;
 
 	@SerializedName("brightness")
 	private String brightness;
 
 	@SerializedName("color")
-	private String color;
+	private Object color;
 
 	@SerializedName("size")
 	private String size;
 
-	@SerializedName("isTemplate")
-	private boolean isTemplate;
+	@SerializedName("idAttachment")
+	private Object idAttachment;
 
-	public void setIdUploadedBackground(boolean idUploadedBackground){
+	@SerializedName("idPlugin")
+	private Object idPlugin;
+
+	public void setIdUploadedBackground(Object idUploadedBackground){
 		this.idUploadedBackground = idUploadedBackground;
 	}
 
-	public boolean isIdUploadedBackground(){
+	public Object getIdUploadedBackground(){
 		return idUploadedBackground;
 	}
 
@@ -35,11 +38,11 @@ public class Cover{
 		return brightness;
 	}
 
-	public void setColor(String color){
+	public void setColor(Object color){
 		this.color = color;
 	}
 
-	public String getColor(){
+	public Object getColor(){
 		return color;
 	}
 
@@ -51,12 +54,20 @@ public class Cover{
 		return size;
 	}
 
-	public void setIsTemplate(boolean isTemplate){
-		this.isTemplate = isTemplate;
+	public void setIdAttachment(Object idAttachment){
+		this.idAttachment = idAttachment;
 	}
 
-	public boolean isIsTemplate(){
-		return isTemplate;
+	public Object getIdAttachment(){
+		return idAttachment;
+	}
+
+	public void setIdPlugin(Object idPlugin){
+		this.idPlugin = idPlugin;
+	}
+
+	public Object getIdPlugin(){
+		return idPlugin;
 	}
 
 	@Override
@@ -67,7 +78,8 @@ public class Cover{
 			",brightness = '" + brightness + '\'' + 
 			",color = '" + color + '\'' + 
 			",size = '" + size + '\'' + 
-			",isTemplate = '" + isTemplate + '\'' + 
+			",idAttachment = '" + idAttachment + '\'' + 
+			",idPlugin = '" + idPlugin + '\'' + 
 			"}";
 		}
 }

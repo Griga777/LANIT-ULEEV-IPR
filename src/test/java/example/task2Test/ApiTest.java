@@ -17,6 +17,9 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
+    private static String BOARD_ID;
+    private static String LIST_ID;
+    private static String CARD_ID;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -37,16 +40,16 @@ public class ApiTest {
         String boardName = "IPR_ULEEV";
         board.setName(boardName);
 
-        Response response = given()
+        Response boardCreation = given()
                 .queryParam("name", boardName)
                 .when()
                 .post("/1/boards")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        String boardId = response.path("id").toString();
+        BOARD_ID = boardCreation.path("id").toString();
         Board actual = given()
-                .pathParam("id", boardId)
+                .pathParam("id", BOARD_ID)
                 .when()
                 .get("/1/boards/{id}")
                 .then()
@@ -60,23 +63,26 @@ public class ApiTest {
     public void createNewList() {
         List list = new List();
         String listName = "Backlog";
+        String boardId = BOARD_ID;
         list.setName(listName);
 
-        given()
-                .body(list)
+        Response listCreation = given()
+                .queryParam("name", listName)
+                .queryParam("idBoard", boardId)
                 .when()
-                .post("/1/lists/")
+                .post("/1/lists")
                 .then()
-                .statusCode(200);
-        List actual =
-                given()
-                        .pathParam("name", listName)
-                        .when()
-                        .get("/1/lists/{name}")
-                        .then()
-                        .statusCode(200)
-                        .extract().body()
-                        .as(List.class);
+                .statusCode(200)
+                .extract().response();
+        LIST_ID = listCreation.path("id").toString();
+        List actual = given()
+                .pathParam("id", LIST_ID)
+                .when()
+                .get("/1/lists/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(List.class);
         Assert.assertEquals(actual.getName(), list.getName());
     }
 
@@ -86,21 +92,23 @@ public class ApiTest {
         String cardName = "Карточка для изучения API";
         card.setName(cardName);
 
-        given()
-                .body(card)
+        Response cardCreation = given()
+                .queryParam("name", cardName)
+                .queryParam("idList", LIST_ID)
                 .when()
-                .post("/1/cards/")
+                .post("/1/cards")
                 .then()
-                .statusCode(200);
-        Card actual =
-                given()
-                        .pathParam("name", cardName)
-                        .when()
-                        .get("/1/cards/{name}")
-                        .then()
-                        .statusCode(200)
-                        .extract().body()
-                        .as(Card.class);
+                .statusCode(200)
+                .extract().response();
+        CARD_ID = cardCreation.path("id").toString();
+        Card actual = given()
+                .pathParam("id", CARD_ID)
+                .when()
+                .get("/1/cards/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Card.class);
         Assert.assertEquals(actual.getName(), card.getName());
     }
 

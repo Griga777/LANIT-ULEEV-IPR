@@ -8,11 +8,17 @@ public class Card{
 	@SerializedName("descData")
 	private DescData descData;
 
+	@SerializedName("attachments")
+	private List<Object> attachments;
+
 	@SerializedName("idLabels")
-	private List<IdLabelsItem> idLabels;
+	private List<Object> idLabels;
 
 	@SerializedName("shortUrl")
 	private String shortUrl;
+
+	@SerializedName("dueComplete")
+	private boolean dueComplete;
 
 	@SerializedName("dateLastActivity")
 	private String dateLastActivity;
@@ -21,19 +27,16 @@ public class Card{
 	private String idList;
 
 	@SerializedName("idMembersVoted")
-	private List<String> idMembersVoted;
+	private List<Object> idMembersVoted;
 
 	@SerializedName("shortLink")
 	private String shortLink;
-
-	@SerializedName("creationMethod")
-	private String creationMethod;
 
 	@SerializedName("cover")
 	private Cover cover;
 
 	@SerializedName("dueReminder")
-	private String dueReminder;
+	private Object dueReminder;
 
 	@SerializedName("subscribed")
 	private boolean subscribed;
@@ -42,49 +45,55 @@ public class Card{
 	private int pos;
 
 	@SerializedName("idChecklists")
-	private List<IdChecklistsItem> idChecklists;
+	private List<Object> idChecklists;
+
+	@SerializedName("stickers")
+	private List<Object> stickers;
 
 	@SerializedName("id")
 	private String id;
 
 	@SerializedName("email")
-	private String email;
+	private Object email;
 
 	@SerializedName("limits")
 	private Limits limits;
 
-	@SerializedName("address")
-	private String address;
-
 	@SerializedName("idBoard")
 	private String idBoard;
 
-	@SerializedName("locationName")
-	private String locationName;
+	@SerializedName("cardRole")
+	private Object cardRole;
 
-	@SerializedName("coordinates")
-	private String coordinates;
+	@SerializedName("start")
+	private Object start;
 
 	@SerializedName("checkItemStates")
-	private List<String> checkItemStates;
+	private List<Object> checkItemStates;
 
 	@SerializedName("url")
 	private String url;
 
 	@SerializedName("labels")
-	private List<String> labels;
+	private List<Object> labels;
 
 	@SerializedName("badges")
 	private Badges badges;
 
 	@SerializedName("idMembers")
-	private List<String> idMembers;
+	private List<Object> idMembers;
 
 	@SerializedName("idShort")
 	private int idShort;
 
 	@SerializedName("due")
-	private String due;
+	private Object due;
+
+	@SerializedName("idAttachmentCover")
+	private Object idAttachmentCover;
+
+	@SerializedName("isTemplate")
+	private boolean isTemplate;
 
 	@SerializedName("name")
 	private String name;
@@ -106,11 +115,19 @@ public class Card{
 		return descData;
 	}
 
-	public void setIdLabels(List<IdLabelsItem> idLabels){
+	public void setAttachments(List<Object> attachments){
+		this.attachments = attachments;
+	}
+
+	public List<Object> getAttachments(){
+		return attachments;
+	}
+
+	public void setIdLabels(List<Object> idLabels){
 		this.idLabels = idLabels;
 	}
 
-	public List<IdLabelsItem> getIdLabels(){
+	public List<Object> getIdLabels(){
 		return idLabels;
 	}
 
@@ -120,6 +137,14 @@ public class Card{
 
 	public String getShortUrl(){
 		return shortUrl;
+	}
+
+	public void setDueComplete(boolean dueComplete){
+		this.dueComplete = dueComplete;
+	}
+
+	public boolean isDueComplete(){
+		return dueComplete;
 	}
 
 	public void setDateLastActivity(String dateLastActivity){
@@ -138,11 +163,11 @@ public class Card{
 		return idList;
 	}
 
-	public void setIdMembersVoted(List<String> idMembersVoted){
+	public void setIdMembersVoted(List<Object> idMembersVoted){
 		this.idMembersVoted = idMembersVoted;
 	}
 
-	public List<String> getIdMembersVoted(){
+	public List<Object> getIdMembersVoted(){
 		return idMembersVoted;
 	}
 
@@ -154,14 +179,6 @@ public class Card{
 		return shortLink;
 	}
 
-	public void setCreationMethod(String creationMethod){
-		this.creationMethod = creationMethod;
-	}
-
-	public String getCreationMethod(){
-		return creationMethod;
-	}
-
 	public void setCover(Cover cover){
 		this.cover = cover;
 	}
@@ -170,11 +187,11 @@ public class Card{
 		return cover;
 	}
 
-	public void setDueReminder(String dueReminder){
+	public void setDueReminder(Object dueReminder){
 		this.dueReminder = dueReminder;
 	}
 
-	public String getDueReminder(){
+	public Object getDueReminder(){
 		return dueReminder;
 	}
 
@@ -194,12 +211,20 @@ public class Card{
 		return pos;
 	}
 
-	public void setIdChecklists(List<IdChecklistsItem> idChecklists){
+	public void setIdChecklists(List<Object> idChecklists){
 		this.idChecklists = idChecklists;
 	}
 
-	public List<IdChecklistsItem> getIdChecklists(){
+	public List<Object> getIdChecklists(){
 		return idChecklists;
+	}
+
+	public void setStickers(List<Object> stickers){
+		this.stickers = stickers;
+	}
+
+	public List<Object> getStickers(){
+		return stickers;
 	}
 
 	public void setId(String id){
@@ -210,11 +235,11 @@ public class Card{
 		return id;
 	}
 
-	public void setEmail(String email){
+	public void setEmail(Object email){
 		this.email = email;
 	}
 
-	public String getEmail(){
+	public Object getEmail(){
 		return email;
 	}
 
@@ -226,14 +251,6 @@ public class Card{
 		return limits;
 	}
 
-	public void setAddress(String address){
-		this.address = address;
-	}
-
-	public String getAddress(){
-		return address;
-	}
-
 	public void setIdBoard(String idBoard){
 		this.idBoard = idBoard;
 	}
@@ -242,27 +259,27 @@ public class Card{
 		return idBoard;
 	}
 
-	public void setLocationName(String locationName){
-		this.locationName = locationName;
+	public void setCardRole(Object cardRole){
+		this.cardRole = cardRole;
 	}
 
-	public String getLocationName(){
-		return locationName;
+	public Object getCardRole(){
+		return cardRole;
 	}
 
-	public void setCoordinates(String coordinates){
-		this.coordinates = coordinates;
+	public void setStart(Object start){
+		this.start = start;
 	}
 
-	public String getCoordinates(){
-		return coordinates;
+	public Object getStart(){
+		return start;
 	}
 
-	public void setCheckItemStates(List<String> checkItemStates){
+	public void setCheckItemStates(List<Object> checkItemStates){
 		this.checkItemStates = checkItemStates;
 	}
 
-	public List<String> getCheckItemStates(){
+	public List<Object> getCheckItemStates(){
 		return checkItemStates;
 	}
 
@@ -274,11 +291,11 @@ public class Card{
 		return url;
 	}
 
-	public void setLabels(List<String> labels){
+	public void setLabels(List<Object> labels){
 		this.labels = labels;
 	}
 
-	public List<String> getLabels(){
+	public List<Object> getLabels(){
 		return labels;
 	}
 
@@ -290,11 +307,11 @@ public class Card{
 		return badges;
 	}
 
-	public void setIdMembers(List<String> idMembers){
+	public void setIdMembers(List<Object> idMembers){
 		this.idMembers = idMembers;
 	}
 
-	public List<String> getIdMembers(){
+	public List<Object> getIdMembers(){
 		return idMembers;
 	}
 
@@ -306,12 +323,28 @@ public class Card{
 		return idShort;
 	}
 
-	public void setDue(String due){
+	public void setDue(Object due){
 		this.due = due;
 	}
 
-	public String getDue(){
+	public Object getDue(){
 		return due;
+	}
+
+	public void setIdAttachmentCover(Object idAttachmentCover){
+		this.idAttachmentCover = idAttachmentCover;
+	}
+
+	public Object getIdAttachmentCover(){
+		return idAttachmentCover;
+	}
+
+	public void setIsTemplate(boolean isTemplate){
+		this.isTemplate = isTemplate;
+	}
+
+	public boolean isIsTemplate(){
+		return isTemplate;
 	}
 
 	public void setName(String name){
@@ -351,25 +384,26 @@ public class Card{
 		return 
 			"Card{" + 
 			"descData = '" + descData + '\'' + 
+			",attachments = '" + attachments + '\'' + 
 			",idLabels = '" + idLabels + '\'' + 
 			",shortUrl = '" + shortUrl + '\'' + 
+			",dueComplete = '" + dueComplete + '\'' + 
 			",dateLastActivity = '" + dateLastActivity + '\'' + 
 			",idList = '" + idList + '\'' + 
 			",idMembersVoted = '" + idMembersVoted + '\'' + 
 			",shortLink = '" + shortLink + '\'' + 
-			",creationMethod = '" + creationMethod + '\'' + 
 			",cover = '" + cover + '\'' + 
 			",dueReminder = '" + dueReminder + '\'' + 
 			",subscribed = '" + subscribed + '\'' + 
 			",pos = '" + pos + '\'' + 
 			",idChecklists = '" + idChecklists + '\'' + 
+			",stickers = '" + stickers + '\'' + 
 			",id = '" + id + '\'' + 
 			",email = '" + email + '\'' + 
 			",limits = '" + limits + '\'' + 
-			",address = '" + address + '\'' + 
 			",idBoard = '" + idBoard + '\'' + 
-			",locationName = '" + locationName + '\'' + 
-			",coordinates = '" + coordinates + '\'' + 
+			",cardRole = '" + cardRole + '\'' + 
+			",start = '" + start + '\'' + 
 			",checkItemStates = '" + checkItemStates + '\'' + 
 			",url = '" + url + '\'' + 
 			",labels = '" + labels + '\'' + 
@@ -377,6 +411,8 @@ public class Card{
 			",idMembers = '" + idMembers + '\'' + 
 			",idShort = '" + idShort + '\'' + 
 			",due = '" + due + '\'' + 
+			",idAttachmentCover = '" + idAttachmentCover + '\'' + 
+			",isTemplate = '" + isTemplate + '\'' + 
 			",name = '" + name + '\'' + 
 			",closed = '" + closed + '\'' + 
 			",manualCoverAttachment = '" + manualCoverAttachment + '\'' + 
