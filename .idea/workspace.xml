@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Attachments.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Badges.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Badges.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Cover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Cover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Emoji.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Emoji.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/IdChecklistsItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/IdLabelsItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Limits.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Limits.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/PerBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645031522719</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="2 задание в процессе">
+      <created>1645041338749</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1645041338749</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
