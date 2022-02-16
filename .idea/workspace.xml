@@ -6,19 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="2 задание в процессе">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/my.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/ContentType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/Header.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/Headers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/QueryParameter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/QueryParameters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/annotations/ServiceDomain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/user/TrelloUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/RestWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/utils/UserLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644956339147</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="2 задание в процессе">
+      <created>1644957542927</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1644957542927</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
