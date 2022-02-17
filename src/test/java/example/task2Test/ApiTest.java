@@ -17,9 +17,9 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static final String BOARD_ID = "620d422537d7226f7bda84af";
-    private static String LIST_ID = "620d4239df6eb980f7e88179";
-    private static String CARD_ID = "620d424fb9ad1b8f51cc701f";
+    private static String ID_BOARD;
+    private static String ID_LIST;
+    private static String ID_CARD;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -38,7 +38,6 @@ public class ApiTest {
     public void createNewBoard() {
         Board board = new Board();
         String boardName = "IPR_ULEEV";
-        String idBoard;
         board.setName(boardName);
 
         Response boardCreation = given()
@@ -48,9 +47,9 @@ public class ApiTest {
                 .then()
                 .statusCode(200)
                 .extract().response();
-        idBoard = boardCreation.path("id").toString();
+        ID_BOARD = boardCreation.path("id").toString();
         Board actual = given()
-                .pathParam("id", idBoard)
+                .pathParam("id", ID_BOARD)
                 .when()
                 .get("/1/boards/{id}")
                 .then()
@@ -68,15 +67,15 @@ public class ApiTest {
 
         Response listCreation = given()
                 .queryParam("name", listName)
-                .queryParam("idBoard", BOARD_ID)
+                .queryParam("idBoard", ID_BOARD)
                 .when()
                 .post("/1/lists")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        LIST_ID = listCreation.path("id").toString();
+        ID_LIST = listCreation.path("id").toString();
         List actual = given()
-                .pathParam("id", LIST_ID)
+                .pathParam("id", ID_LIST)
                 .when()
                 .get("/1/lists/{id}")
                 .then()
@@ -94,15 +93,15 @@ public class ApiTest {
 
         Response cardCreation = given()
                 .queryParam("name", cardName)
-                .queryParam("idList", LIST_ID)
+                .queryParam("idList", ID_LIST)
                 .when()
                 .post("/1/cards")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        CARD_ID = cardCreation.path("id").toString();
+        ID_CARD = cardCreation.path("id").toString();
         Card actual = given()
-                .pathParam("id", CARD_ID)
+                .pathParam("id", ID_CARD)
                 .when()
                 .get("/1/cards/{id}")
                 .then()
@@ -120,15 +119,15 @@ public class ApiTest {
 
         Response cardCreation = given()
                 .queryParam("name", cardName)
-                .queryParam("idList", LIST_ID)
+                .queryParam("idList", ID_LIST)
                 .when()
                 .post("/1/cards")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        CARD_ID = cardCreation.path("id").toString();
+        ID_CARD = cardCreation.path("id").toString();
         Card actual = given()
-                .pathParam("id", CARD_ID)
+                .pathParam("id", ID_CARD)
                 .when()
                 .get("/1/cards/{id}")
                 .then()
