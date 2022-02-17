@@ -1,5 +1,6 @@
 package example.task2Test;
 
+import example.task2.trello.attachments.Attachment;
 import example.task2.trello.boards.Board;
 import example.task2.trello.cards.Card;
 import example.task2.trello.lists.List;
@@ -8,18 +9,23 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.mapper.ObjectMapper;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD;
-    private static String ID_LIST;
-    private static String ID_CARD;
+    private static String ID_BOARD = "620e35aa60e2c97521f0ba0d";
+    private static String ID_LIST = "620e35c31179650bb3d4d79e";
+    private static String ID_CARD = "620e35d736b7581d7891c6ca";
+    private static String ID_ATTACHMENT;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -113,27 +119,28 @@ public class ApiTest {
 
     @Test
     public void createAttachmentOnCard() {
-        Card card = new Card();
-        String cardName = "Карточка для изучения API";
-        card.setName(cardName);
+        Attachment attachment = new Attachment();
+        String attachmentName;
+        Path filePath = Paths.get("C:\\Users\\Uleev\\Postman\\files\\FOTO.jpg");
 
-        Response cardCreation = given()
-                .queryParam("name", cardName)
-                .queryParam("idList", ID_LIST)
+        Response attachmentCreation = given()
+                .queryParam("file", filePath)
                 .when()
-                .post("/1/cards")
+                .post("/1/cards/" + ID_CARD + "/attachments")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_CARD = cardCreation.path("id").toString();
-        Card actual = given()
+        ID_ATTACHMENT = attachmentCreation.path("id").toString();
+        attachmentName = attachmentCreation.path("name").toString();
+        Attachment actual = given()
                 .pathParam("id", ID_CARD)
+                .pathParam("idAttachment", ID_ATTACHMENT)
                 .when()
-                .get("/1/cards/{id}")
+                .get("/1/cards/{id}/attachments/{idAttachment}")
                 .then()
                 .statusCode(200)
                 .extract().body()
-                .as(Card.class);
-        Assert.assertEquals(actual.getName(), card.getName());
+                .as(Attachment.class);
+        Assert.assertEquals(actual.getName(), attachmentName);
     }
 }
