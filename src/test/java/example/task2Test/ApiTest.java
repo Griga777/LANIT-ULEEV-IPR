@@ -3,14 +3,18 @@ package example.task2Test;
 import example.task2.trello.attachments.Attachment;
 import example.task2.trello.boards.Board;
 import example.task2.trello.cards.Card;
+import example.task2.trello.checkItems.Checkitem;
+import example.task2.trello.checklists.Checklist;
 import example.task2.trello.lists.List;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.config.HttpClientConfig;
+import io.restassured.config.RestAssuredConfig;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
-import io.restassured.mapper.ObjectMapper;
 import io.restassured.response.Response;
+import org.apache.http.params.CoreConnectionPNames;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -26,6 +30,9 @@ public class ApiTest {
     private static String ID_LIST = "620e35c31179650bb3d4d79e";
     private static String ID_CARD = "620e35d736b7581d7891c6ca";
     private static String ID_ATTACHMENT;
+    private static String ID_CHECKLIST = "620ea9c120e926405a560b41";
+    private static String ID_CHECKITEM_FIRST;
+    private static String ID_CHECKITEM_SECOND;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -95,10 +102,14 @@ public class ApiTest {
     public void createNewCard() {
         Card card = new Card();
         String cardName = "Карточка для изучения API";
+        String cardDescription = "Тут будет отмечаться прогресс обучения";
+        String cardDueDate = "2022-02-18T23:41:00Z";
         card.setName(cardName);
 
         Response cardCreation = given()
                 .queryParam("name", cardName)
+                .queryParam("desc", cardDescription)
+                .queryParam("due", cardDueDate)
                 .queryParam("idList", ID_LIST)
                 .when()
                 .post("/1/cards")
@@ -122,10 +133,16 @@ public class ApiTest {
         Attachment attachment = new Attachment();
         String attachmentName;
         Path filePath = Paths.get("C:\\Users\\Uleev\\Postman\\files\\FOTO.jpg");
+        RestAssuredConfig config = RestAssured.config()
+                .httpClient(HttpClientConfig.httpClientConfig()
+                        .setParam("http.connection.timeout", 5000)
+                        .setParam("http.socket.timeout", 5000)
+                        .setParam("http.connection-manager.timeout", 5000));
 
         Response attachmentCreation = given()
                 .queryParam("file", filePath)
                 .when()
+                .config(config)
                 .post("/1/cards/" + ID_CARD + "/attachments")
                 .then()
                 .statusCode(200)
@@ -142,5 +159,60 @@ public class ApiTest {
                 .extract().body()
                 .as(Attachment.class);
         Assert.assertEquals(actual.getName(), attachmentName);
+    }
+
+    @Test
+    public void createChecklist() {
+        Checklist checklist = new Checklist();
+        String checklistName = "Чек-лист";
+        checklist.setName(checklistName);
+
+        Response checklistCreation = given()
+                .queryParam("name", checklistName)
+                .queryParam("idCard", ID_CARD)
+                .when()
+                .post("/1/checklists")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_CHECKLIST = checklistCreation.path("id").toString();
+        Checklist actual = given()
+                .pathParam("id", ID_CHECKLIST)
+                .when()
+                .get("/1/checklists/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Checklist.class);
+        Assert.assertEquals(actual.getName(), checklist.getName());
+    }
+
+    @Test
+    public void createCheckitemOnChecklist() {
+        Checkitem checkitem = new Checkitem();
+        String checkitemName1 = "Понять протокол HTTP";
+        String checkitemName2 = "Выучить методы запросов";
+        checkitem.setName(checkitemName1);
+        checkitem.setName(checkitemName2);
+
+        Response checkitemCreationFirst = given()
+                .queryParam("name", checkitemName1)
+                .when()
+                .post("/1/checklists/" + ID_CHECKLIST + "/checkItems")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_CHECKLIST = checkitemCreationFirst.path("idChecklist").toString();
+        ID_CHECKITEM_FIRST = checkitemCreationFirst.path("id").toString();
+        Checkitem actual = given()
+                .pathParam("id", ID_CHECKLIST)
+                .pathParam("idCheckItem", ID_CHECKITEM_FIRST)
+                .when()
+                .get("/1/checklists/{id}/checkItems/{idCheckItem}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Checkitem.class);
+        Assert.assertEquals(actual.getName(), checkitem.getName());
     }
 }
