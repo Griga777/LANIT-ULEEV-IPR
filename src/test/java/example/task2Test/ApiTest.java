@@ -189,12 +189,14 @@ public class ApiTest {
 
     @Test
     public void createCheckitemOnChecklist() {
-        Checkitem checkitem = new Checkitem();
+        Checkitem checkitem1 = new Checkitem();
+        Checkitem checkitem2 = new Checkitem();
         String checkitemName1 = "Понять протокол HTTP";
         String checkitemName2 = "Выучить методы запросов";
-        checkitem.setName(checkitemName1);
-        checkitem.setName(checkitemName2);
+        checkitem1.setName(checkitemName1);
+        checkitem2.setName(checkitemName2);
 
+        // Понять протокол HTTP
         Response checkitemCreationFirst = given()
                 .queryParam("name", checkitemName1)
                 .when()
@@ -213,6 +215,8 @@ public class ApiTest {
                 .statusCode(200)
                 .extract().body()
                 .as(Checkitem.class);
-        Assert.assertEquals(actual.getName(), checkitem.getName());
+        Assert.assertEquals(actual.getName(), checkitem1.getName());
+
+        // Выучить методы запросов
     }
 }
