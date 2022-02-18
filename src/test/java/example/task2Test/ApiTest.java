@@ -14,7 +14,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.http.params.CoreConnectionPNames;
+import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -28,11 +28,12 @@ public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
     private static String ID_BOARD = "620e35aa60e2c97521f0ba0d";
     private static String ID_LIST = "620e35c31179650bb3d4d79e";
-    private static String ID_CARD = "620e35d736b7581d7891c6ca";
+    private static String ID_CARD = "620ff3788f92b67d29db9bcb";
     private static String ID_ATTACHMENT;
-    private static String ID_CHECKLIST = "620ea9c120e926405a560b41";
-    private static String ID_CHECKITEM_FIRST;
-    private static String ID_CHECKITEM_SECOND;
+    private static String ID_CHECKLIST = "620fc619e1c13b115ded843c";
+    private static String ID_CHECKITEM_FIRST = "620ff87240a5ef1801436aa3";
+    private static String ID_CHECKITEM_SECOND = "620ff8d9392fac8eab00a039";
+    private static String ID_UPDATE_CHECKITEM;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -74,20 +75,24 @@ public class ApiTest {
 
     @Test
     public void createNewList() {
-        List list = new List();
-        String listName = "Backlog";
-        list.setName(listName);
+        List list1 = new List();
+        List list2 = new List();
+        String listName1 = "Backlog";
+        String listName2 = "Done";
+        list1.setName(listName1);
+        list2.setName(listName2);
 
-        Response listCreation = given()
-                .queryParam("name", listName)
+        // Колонка "Backlog"
+        Response listCreationFirst = given()
+                .queryParam("name", listName1)
                 .queryParam("idBoard", ID_BOARD)
                 .when()
                 .post("/1/lists")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_LIST = listCreation.path("id").toString();
-        List actual = given()
+        ID_LIST = listCreationFirst.path("id").toString();
+        List actual1 = given()
                 .pathParam("id", ID_LIST)
                 .when()
                 .get("/1/lists/{id}")
@@ -95,7 +100,27 @@ public class ApiTest {
                 .statusCode(200)
                 .extract().body()
                 .as(List.class);
-        Assert.assertEquals(actual.getName(), list.getName());
+        Assert.assertEquals(actual1.getName(), list1.getName());
+
+        // Колонка "Done"
+        Response listCreationSecond = given()
+                .queryParam("name", listName2)
+                .queryParam("idBoard", ID_BOARD)
+                .when()
+                .post("/1/lists")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_LIST = listCreationSecond.path("id").toString();
+        List actual2 = given()
+                .pathParam("id", ID_LIST)
+                .when()
+                .get("/1/lists/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(List.class);
+        Assert.assertEquals(actual2.getName(), list2.getName());
     }
 
     @Test
@@ -204,9 +229,8 @@ public class ApiTest {
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_CHECKLIST = checkitemCreationFirst.path("idChecklist").toString();
         ID_CHECKITEM_FIRST = checkitemCreationFirst.path("id").toString();
-        Checkitem actual = given()
+        Checkitem actual1 = given()
                 .pathParam("id", ID_CHECKLIST)
                 .pathParam("idCheckItem", ID_CHECKITEM_FIRST)
                 .when()
@@ -215,8 +239,52 @@ public class ApiTest {
                 .statusCode(200)
                 .extract().body()
                 .as(Checkitem.class);
-        Assert.assertEquals(actual.getName(), checkitem1.getName());
+        Assert.assertEquals(actual1.getName(), checkitem1.getName());
 
         // Выучить методы запросов
+        Response checkitemCreationSecond = given()
+                .queryParam("name", checkitemName2)
+                .when()
+                .post("/1/checklists/" + ID_CHECKLIST + "/checkItems")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_CHECKITEM_SECOND = checkitemCreationSecond.path("id").toString();
+        Checkitem actual2 = given()
+                .pathParam("id", ID_CHECKLIST)
+                .pathParam("idCheckItem", ID_CHECKITEM_SECOND)
+                .when()
+                .get("/1/checklists/{id}/checkItems/{idCheckItem}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Checkitem.class);
+        Assert.assertEquals(actual2.getName(), checkitem2.getName());
+    }
+
+    @Test
+    public void updateCheckItemOnCard() {
+        Checkitem checkitem = new Checkitem();
+        String checkitemState = "complete";
+        checkitem.setState(checkitemState);
+
+        Response updateCheckItemState = given()
+                .queryParam("state", checkitemState)
+                .when()
+                .put("/1/cards/" + ID_CARD + "/checkItem/" + ID_CHECKITEM_FIRST)
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_UPDATE_CHECKITEM = updateCheckItemState.path("id").toString();
+        Checkitem actual = given()
+                .pathParam("id", ID_CARD)
+                .pathParam("idCheckItem", ID_UPDATE_CHECKITEM)
+                .when()
+                .get("/1/cards/{id}/checkItem/{idCheckItem}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Checkitem.class);
+        Assert.assertEquals(actual.getState(), checkitem.getState());
     }
 }
