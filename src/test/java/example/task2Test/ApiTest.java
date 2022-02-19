@@ -6,6 +6,7 @@ import example.task2.trello.cards.Card;
 import example.task2.trello.checkItems.Checkitem;
 import example.task2.trello.checklists.Checklist;
 import example.task2.trello.lists.List;
+import example.task2.trello.movedCards.MovedCard;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.config.HttpClientConfig;
@@ -14,7 +15,6 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -26,14 +26,18 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD = "620e35aa60e2c97521f0ba0d";
-    private static String ID_LIST = "620e35c31179650bb3d4d79e";
-    private static String ID_CARD = "620ff3788f92b67d29db9bcb";
+    private static String ID_BOARD = "6210cf8416aa06816c2eadcb";
+    private static String ID_LIST_BACKLOG = "6210d00ad7bb2f32842a8eb5";
+    private static String ID_LIST_DONE = "6210cfeef44594075e81b708";
+    private static String ID_CARD = "6210d050bb7a5a021d9a6d5c";
+    private static String ID_MOVED_CARD;
     private static String ID_ATTACHMENT;
-    private static String ID_CHECKLIST = "620fc619e1c13b115ded843c";
-    private static String ID_CHECKITEM_FIRST = "620ff87240a5ef1801436aa3";
-    private static String ID_CHECKITEM_SECOND = "620ff8d9392fac8eab00a039";
-    private static String ID_UPDATE_CHECKITEM;
+    private static String ID_CHECKLIST = "6210d08b2fdbf364022ce6a9";
+    private static String ID_CHECKITEM_FIRST = "6210d0dd4adb3b7f044bd3ed";
+    private static String ID_CHECKITEM_SECOND = "6210d0f8d862253e6afed990";
+    private static String ID_UPDATE_CHECKITEM_FIRST;
+    private static String ID_UPDATE_CHECKITEM_SECOND;
+    private static String ID_CLOSED_LIST_BACKLOG;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -83,7 +87,7 @@ public class ApiTest {
         list2.setName(listName2);
 
         // Колонка "Backlog"
-        Response listCreationFirst = given()
+        Response firstListCreation = given()
                 .queryParam("name", listName1)
                 .queryParam("idBoard", ID_BOARD)
                 .when()
@@ -91,9 +95,9 @@ public class ApiTest {
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_LIST = listCreationFirst.path("id").toString();
+        ID_LIST_BACKLOG = firstListCreation.path("id").toString();
         List actual1 = given()
-                .pathParam("id", ID_LIST)
+                .pathParam("id", ID_LIST_BACKLOG)
                 .when()
                 .get("/1/lists/{id}")
                 .then()
@@ -103,7 +107,7 @@ public class ApiTest {
         Assert.assertEquals(actual1.getName(), list1.getName());
 
         // Колонка "Done"
-        Response listCreationSecond = given()
+        Response secondListCreation = given()
                 .queryParam("name", listName2)
                 .queryParam("idBoard", ID_BOARD)
                 .when()
@@ -111,9 +115,9 @@ public class ApiTest {
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_LIST = listCreationSecond.path("id").toString();
+        ID_LIST_DONE = secondListCreation.path("id").toString();
         List actual2 = given()
-                .pathParam("id", ID_LIST)
+                .pathParam("id", ID_LIST_DONE)
                 .when()
                 .get("/1/lists/{id}")
                 .then()
@@ -135,7 +139,7 @@ public class ApiTest {
                 .queryParam("name", cardName)
                 .queryParam("desc", cardDescription)
                 .queryParam("due", cardDueDate)
-                .queryParam("idList", ID_LIST)
+                .queryParam("idList", ID_LIST_BACKLOG)
                 .when()
                 .post("/1/cards")
                 .then()
@@ -275,10 +279,10 @@ public class ApiTest {
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_UPDATE_CHECKITEM = updateCheckItemState.path("id").toString();
+        ID_UPDATE_CHECKITEM_FIRST = updateCheckItemState.path("id").toString();
         Checkitem actual = given()
                 .pathParam("id", ID_CARD)
-                .pathParam("idCheckItem", ID_UPDATE_CHECKITEM)
+                .pathParam("idCheckItem", ID_UPDATE_CHECKITEM_FIRST)
                 .when()
                 .get("/1/cards/{id}/checkItem/{idCheckItem}")
                 .then()
@@ -286,5 +290,108 @@ public class ApiTest {
                 .extract().body()
                 .as(Checkitem.class);
         Assert.assertEquals(actual.getState(), checkitem.getState());
+    }
+
+    @Test
+    public void moveCardToAnotherColumn() {
+        MovedCard movedCard = new MovedCard();
+
+        Response cardMoveCreation = given()
+                .queryParam("idList", ID_LIST_DONE)
+                .when()
+                .put("/1/cards/" + ID_CARD)
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_MOVED_CARD = cardMoveCreation.path("id").toString();
+        MovedCard actual = given()
+                .pathParam("id", ID_MOVED_CARD)
+                .when()
+                .get("/1/cards/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(MovedCard.class);
+        Assert.assertEquals(actual.getIdList(), movedCard.getIdList());
+    }
+
+    @Test
+    public void archiveOrUnarchiveList() {
+        List list = new List();
+        String listName = "Backlog";
+        list.setName(listName);
+
+        Response archiveOrUnarchiveListCreation = given()
+                .queryParam("value", true)
+                .when()
+                .put("/1/lists/" + ID_LIST_BACKLOG + "/closed")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_CLOSED_LIST_BACKLOG = archiveOrUnarchiveListCreation.path("id").toString();
+        List actual = given()
+                .pathParam("id", ID_CLOSED_LIST_BACKLOG)
+                .when()
+                .get("/1/lists/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(List.class);
+        Assert.assertEquals(actual.getName(), list.getName());
+    }
+
+    @Test
+    public void updateCheckItemOnAnotherCard() {
+        Checkitem checkitem = new Checkitem();
+        String checkitemState = "complete";
+        checkitem.setState(checkitemState);
+
+        Response updateCheckItemState = given()
+                .queryParam("state", checkitemState)
+                .when()
+                .put("/1/cards/" + ID_CARD + "/checkItem/" + ID_CHECKITEM_SECOND)
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_UPDATE_CHECKITEM_SECOND = updateCheckItemState.path("id").toString();
+        Checkitem actual = given()
+                .pathParam("id", ID_CARD)
+                .pathParam("idCheckItem", ID_UPDATE_CHECKITEM_SECOND)
+                .when()
+                .get("/1/cards/{id}/checkItem/{idCheckItem}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Checkitem.class);
+        Assert.assertEquals(actual.getState(), checkitem.getState());
+    }
+
+    @Test
+    public void createCommentOnCard() {
+        Card card = new Card();
+        String cardName = "Карточка для изучения API";
+        String cardComment = ":thumbsup:";
+        card.setC
+        card.setName(cardName);
+
+        Response cardCreation = given()
+                .queryParam("name", cardName)
+                .queryParam("desc", cardDescription)
+                .queryParam("idList", ID_LIST_BACKLOG)
+                .when()
+                .post("/1/cards")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_CARD = cardCreation.path("id").toString();
+        Card actual = given()
+                .pathParam("id", ID_CARD)
+                .when()
+                .get("/1/cards/{id}")
+                .then()
+                .statusCode(200)
+                .extract().body()
+                .as(Card.class);
+        Assert.assertEquals(actual.getName(), card.getName());
     }
 }
