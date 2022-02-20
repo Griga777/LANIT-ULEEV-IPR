@@ -368,31 +368,31 @@ public class ApiTest {
         Assert.assertEquals(actual.getState(), checkitem.getState());
     }
 
-    @Test
-    public void createCommentOnCard() {
-        Comment comment = new Comment();
-        String cardComment = ":thumbsup:";
-        String actionTypes = "commentCard";
-        comment.setText(cardComment);
-
-        Response cardCommentCreation = given()
-                .queryParam("text", cardComment)
-                .when()
-                .post("/1/cards/" + ID_CARD + "/actions/comments")
-                .then()
-                .statusCode(200)
-                .extract().response();
-        ID_COMMENT = cardCommentCreation.path("id").toString();
-        Comment actual = given()
-                .pathParam("id", ID_CARD)
-                .queryParam("filter", actionTypes)
-                .queryParam("id", ID_COMMENT)
-                .when()
-                .get("/1/cards/{id}/actions")
-                .then()
-                .statusCode(200)
-                .extract().body()
-                .as(Comment.class);
-        Assert.assertEquals(actual.getText(), comment.getText());
-    }
+//    @Test
+//    public void createCommentOnCard() {
+//        Comment comment = new Comment();
+//        String cardComment = ":thumbsup:";
+//        String actionTypes = "commentCard";
+//        comment.setText(cardComment);
+//
+//        Response cardCommentCreation = given()
+//                .queryParam("text", cardComment)
+//                .when()
+//                .post("/1/cards/" + ID_CARD + "/actions/comments")
+//                .then()
+//                .statusCode(200)
+//                .extract().response();
+//        ID_COMMENT = cardCommentCreation.path("id").toString();
+//        Comment actual = given()
+//                .pathParam("id", ID_CARD)
+//                .queryParam("filter", actionTypes)
+//                .queryParam("id", ID_COMMENT)
+//                .when()
+//                .get("/1/cards/{id}/actions")
+//                .then()
+//                .statusCode(200)
+//                .extract().body()
+//                .as(Comment.class);
+//        Assert.assertEquals(actual.getText(), comment.getText());
+//    }
 }
