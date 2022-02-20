@@ -5,6 +5,7 @@ import example.task2.trello.boards.Board;
 import example.task2.trello.cards.Card;
 import example.task2.trello.checkItems.Checkitem;
 import example.task2.trello.checklists.Checklist;
+import example.task2.trello.comments.Comment;
 import example.task2.trello.lists.List;
 import example.task2.trello.movedCards.MovedCard;
 import io.restassured.RestAssured;
@@ -38,6 +39,7 @@ public class ApiTest {
     private static String ID_UPDATE_CHECKITEM_FIRST;
     private static String ID_UPDATE_CHECKITEM_SECOND;
     private static String ID_CLOSED_LIST_BACKLOG;
+    private static String ID_COMMENT;
 
     @BeforeClass
     public static void prepareRequest() {
@@ -368,30 +370,29 @@ public class ApiTest {
 
     @Test
     public void createCommentOnCard() {
-        Card card = new Card();
-        String cardName = "Карточка для изучения API";
+        Comment comment = new Comment();
         String cardComment = ":thumbsup:";
-        card.setC
-        card.setName(cardName);
+        String actionTypes = "commentCard";
+        comment.setText(cardComment);
 
-        Response cardCreation = given()
-                .queryParam("name", cardName)
-                .queryParam("desc", cardDescription)
-                .queryParam("idList", ID_LIST_BACKLOG)
+        Response cardCommentCreation = given()
+                .queryParam("text", cardComment)
                 .when()
-                .post("/1/cards")
+                .post("/1/cards/" + ID_CARD + "/actions/comments")
                 .then()
                 .statusCode(200)
                 .extract().response();
-        ID_CARD = cardCreation.path("id").toString();
-        Card actual = given()
+        ID_COMMENT = cardCommentCreation.path("id").toString();
+        Comment actual = given()
                 .pathParam("id", ID_CARD)
+                .queryParam("filter", actionTypes)
+                .queryParam("id", ID_COMMENT)
                 .when()
-                .get("/1/cards/{id}")
+                .get("/1/cards/{id}/actions")
                 .then()
                 .statusCode(200)
                 .extract().body()
-                .as(Card.class);
-        Assert.assertEquals(actual.getName(), card.getName());
+                .as(Comment.class);
+        Assert.assertEquals(actual.getText(), comment.getText());
     }
 }
