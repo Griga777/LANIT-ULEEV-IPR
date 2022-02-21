@@ -7,30 +7,6 @@
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/attachments/Attachment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/attachments/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/attachments/PreviewsItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/LabelNames.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/Prefs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/AttachmentsByType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Badges.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Card.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Cover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/DescData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Emoji.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Trello.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/Checkitem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/Emoji.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/NameData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checklists/Checklist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checklists/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/lists/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/lists/List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -468,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645429589695</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="3 задание в процессе">
+      <created>1645434131235</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1645434131235</updated>
+    </task>
+    <task id="LOCAL-00044" summary="3 задание в процессе">
+      <created>1645434172647</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1645434172647</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -505,7 +495,8 @@
     <MESSAGE value="2 задание готово" />
     <MESSAGE value="2 задание переименовал папку" />
     <MESSAGE value="3 задание добавил зависимость в .pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 задание добавил зависимость в .pom" />
+    <MESSAGE value="3 задание в процессе" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 задание в процессе" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
