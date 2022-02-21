@@ -1,11 +1,11 @@
 package example.task2Test;
 
-import example.task2.trello.attachments.Attachment;
-import example.task2.trello.boards.Board;
-import example.task2.trello.cards.Card;
-import example.task2.trello.checkItems.Checkitem;
-import example.task2.trello.checklists.Checklist;
-import example.task2.trello.lists.List;
+import example.task2.trelloAPI.attachments.Attachment;
+import example.task2.trelloAPI.boards.Board;
+import example.task2.trelloAPI.cards.Card;
+import example.task2.trelloAPI.checkItems.Checkitem;
+import example.task2.trelloAPI.checklists.Checklist;
+import example.task2.trelloAPI.lists.List;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.config.HttpClientConfig;
