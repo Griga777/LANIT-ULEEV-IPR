@@ -5,39 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/attachments/Attachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/attachments/Attachment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/attachments/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/attachments/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/attachments/PreviewsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/attachments/PreviewsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/boards/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/LabelNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/boards/LabelNames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/boards/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/boards/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/boards/Prefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/AttachmentsByType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/AttachmentsByType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Badges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/Badges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Cover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/Cover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/DescData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/DescData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Emoji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/Emoji.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/cards/Trello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/cards/Trello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/checkItems/Checkitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/checkItems/Checkitem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/checkItems/Emoji.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/checkItems/Emoji.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/checkItems/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/checkItems/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/checkItems/NameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/checkItems/NameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/checklists/Checklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/checklists/Checklist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/checklists/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/checklists/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/lists/Limits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/lists/Limits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/lists/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/task2/trelloAPI/lists/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/AttachmentsByType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/Badges.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/CheckItemStatesItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/Cover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/DescData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/Emoji.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/MovedCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/ScaledItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/movedCards/Trello.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645427561652</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="2 задание переименовал папку">
+      <created>1645427889862</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1645427889862</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -499,7 +475,8 @@
     <MESSAGE value="Убрал лишние зависимости" />
     <MESSAGE value="2 задание в процессе" />
     <MESSAGE value="2 задание готово" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 задание готово" />
+    <MESSAGE value="2 задание переименовал папку" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 задание переименовал папку" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
