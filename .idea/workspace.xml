@@ -4,49 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="2 задание в процессе">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/AppCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Card.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/CommentItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Data.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Emoji.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Limits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/MemberCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/NonPublic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/PerAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/Reactions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/TextData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/comments/UniquePerAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/AttachmentsByType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/Badges.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/CheckItemStatesItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/Cover.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/DescData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/Emoji.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/MovedCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/ScaledItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/task2/trello/movedCards/Trello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/AppCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Card.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/CommentItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Emoji.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Limits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/MemberCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/NonPublic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/PerAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/Reactions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/TextData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/comments/UniquePerAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -459,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645379254513</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="2 задание в процессе">
+      <created>1645427480715</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1645427480715</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
