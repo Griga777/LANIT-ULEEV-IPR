@@ -16,20 +16,12 @@ public class WebTest {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "F:\\Программы\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, SECONDS);
         driver.get(BASE_URL);
 
         System.out.println(driver.getPageSource());
-
-//        findCategory();
-//        searchAd();
-//        clickFieldCity();
-//        fieldCityVladivostok();
-//        activateCheckbox();
-//        selectFilter();
-//        mostPriceyPrinters();
 
         try {
             Thread.sleep(5_000);
