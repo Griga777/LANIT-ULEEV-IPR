@@ -5,8 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/attachments/Attachment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/attachments/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/attachments/PreviewsItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/LabelNames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/boards/Prefs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/AttachmentsByType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Badges.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Cover.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/DescData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Emoji.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/cards/Trello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/Checkitem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/Emoji.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checkItems/NameData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checklists/Checklist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/checklists/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/lists/Limits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/task2/trello/lists/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LANIT/ЛАНИТ ШКОЛА АТ/Примеры кода/lanit_at_school_202104-master/day07_selenium" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -53,7 +77,20 @@
       <recent name="example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.createCommentOnCard">
+  <component name="RunManager" selected="Application.WebTest">
+    <configuration name="WebTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="example.task3Test.WebTest" />
+      <module name="LANIT-ULEEV-IPR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.task3Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiTest.archiveOrUnarchiveList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
@@ -118,29 +155,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.updateCheckItemOnCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LANIT-ULEEV-IPR" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="example.task2Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="example.task2Test" />
-      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="updateCheckItemOnCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WebTest" />
         <item itemvalue="JUnit.ApiTest.createCommentOnCard" />
         <item itemvalue="JUnit.ApiTest.updateCheckItemOnAnotherCard" />
         <item itemvalue="JUnit.ApiTest.archiveOrUnarchiveList" />
         <item itemvalue="JUnit.ApiTest.moveCardToAnotherColumn" />
-        <item itemvalue="JUnit.ApiTest.updateCheckItemOnCard" />
       </list>
     </recent_temporary>
   </component>
@@ -440,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645427889862</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="3 задание добавил зависимость в .pom">
+      <created>1645429589695</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1645429589695</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -476,7 +504,8 @@
     <MESSAGE value="2 задание в процессе" />
     <MESSAGE value="2 задание готово" />
     <MESSAGE value="2 задание переименовал папку" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 задание переименовал папку" />
+    <MESSAGE value="3 задание добавил зависимость в .pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 задание добавил зависимость в .pom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
