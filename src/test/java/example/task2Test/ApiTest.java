@@ -5,9 +5,7 @@ import example.task2.trello.boards.Board;
 import example.task2.trello.cards.Card;
 import example.task2.trello.checkItems.Checkitem;
 import example.task2.trello.checklists.Checklist;
-import example.task2.trello.comments.Comment;
 import example.task2.trello.lists.List;
-import example.task2.trello.movedCards.MovedCard;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.config.HttpClientConfig;
@@ -27,15 +25,15 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD = "6210cf8416aa06816c2eadcb";
-    private static String ID_LIST_BACKLOG = "6210d00ad7bb2f32842a8eb5";
-    private static String ID_LIST_DONE = "6210cfeef44594075e81b708";
-    private static String ID_CARD = "6210d050bb7a5a021d9a6d5c";
+    private static String ID_BOARD = "62132b951bcf405eb6f57746";
+    private static String ID_LIST_BACKLOG = "62132bf80e80b02b8501cbdd";
+    private static String ID_LIST_DONE = "62132bfa2a4f7240926325db";
+    private static String ID_CARD = "62132cbdb8e23b8f6ea577ce";
     private static String ID_MOVED_CARD;
     private static String ID_ATTACHMENT;
-    private static String ID_CHECKLIST = "6210d08b2fdbf364022ce6a9";
-    private static String ID_CHECKITEM_FIRST = "6210d0dd4adb3b7f044bd3ed";
-    private static String ID_CHECKITEM_SECOND = "6210d0f8d862253e6afed990";
+    private static String ID_CHECKLIST = "62132ddd891b2e7d0cc84aaf";
+    private static String ID_CHECKITEM_FIRST = "62132e1c78374c81c86642a1";
+    private static String ID_CHECKITEM_SECOND = "62132e1ef675438038278fe2";
     private static String ID_UPDATE_CHECKITEM_FIRST;
     private static String ID_UPDATE_CHECKITEM_SECOND;
     private static String ID_CLOSED_LIST_BACKLOG;
@@ -134,7 +132,7 @@ public class ApiTest {
         Card card = new Card();
         String cardName = "Карточка для изучения API";
         String cardDescription = "Тут будет отмечаться прогресс обучения";
-        String cardDueDate = "2022-02-18T23:41:00Z";
+        String cardDueDate = "2022-02-22T23:41:00Z";
         card.setName(cardName);
 
         Response cardCreation = given()
@@ -296,7 +294,8 @@ public class ApiTest {
 
     @Test
     public void moveCardToAnotherColumn() {
-        MovedCard movedCard = new MovedCard();
+        String idList;
+        String actualIdList;
 
         Response cardMoveCreation = given()
                 .queryParam("idList", ID_LIST_DONE)
@@ -306,15 +305,16 @@ public class ApiTest {
                 .statusCode(200)
                 .extract().response();
         ID_MOVED_CARD = cardMoveCreation.path("id").toString();
-        MovedCard actual = given()
+        idList = cardMoveCreation.path("idList").toString();
+        Response actualCardMove = given()
                 .pathParam("id", ID_MOVED_CARD)
                 .when()
                 .get("/1/cards/{id}")
                 .then()
                 .statusCode(200)
-                .extract().body()
-                .as(MovedCard.class);
-        Assert.assertEquals(actual.getIdList(), movedCard.getIdList());
+                .extract().response();
+        actualIdList = actualCardMove.path("idList").toString();
+        Assert.assertEquals(actualIdList, idList);
     }
 
     @Test
@@ -368,31 +368,32 @@ public class ApiTest {
         Assert.assertEquals(actual.getState(), checkitem.getState());
     }
 
-//    @Test
-//    public void createCommentOnCard() {
-//        Comment comment = new Comment();
-//        String cardComment = ":thumbsup:";
-//        String actionTypes = "commentCard";
-//        comment.setText(cardComment);
-//
-//        Response cardCommentCreation = given()
-//                .queryParam("text", cardComment)
-//                .when()
-//                .post("/1/cards/" + ID_CARD + "/actions/comments")
-//                .then()
-//                .statusCode(200)
-//                .extract().response();
-//        ID_COMMENT = cardCommentCreation.path("id").toString();
-//        Comment actual = given()
-//                .pathParam("id", ID_CARD)
-//                .queryParam("filter", actionTypes)
-//                .queryParam("id", ID_COMMENT)
-//                .when()
-//                .get("/1/cards/{id}/actions")
-//                .then()
-//                .statusCode(200)
-//                .extract().body()
-//                .as(Comment.class);
-//        Assert.assertEquals(actual.getText(), comment.getText());
-//    }
+    @Test
+    public void createCommentOnCard() {
+        String cardComment = ":thumbsup:";
+        String actionTypes = "commentCard";
+        String responseCardComment;
+        String actualResponseCardComment;
+
+        Response cardCommentCreation = given()
+                .queryParam("text", cardComment)
+                .when()
+                .post("/1/cards/" + ID_CARD + "/actions/comments")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        ID_COMMENT = cardCommentCreation.path("id").toString();
+        responseCardComment = cardCommentCreation.path("data.text").toString();
+        Response actualCardCommentCreation = given()
+                .pathParam("id", ID_CARD)
+                .queryParam("filter", actionTypes)
+                .queryParam("id", ID_COMMENT)
+                .when()
+                .get("/1/cards/{id}/actions")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        actualResponseCardComment = actualCardCommentCreation.path("[0].data.text").toString();
+        Assert.assertEquals(actualResponseCardComment, responseCardComment);
+    }
 }
