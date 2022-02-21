@@ -53,13 +53,16 @@ public class WebTest {
     }
 
     private static void сheckCardLocation() {
+        String cardName = "Карточка для изучения API";
         params = driver.findElement(By.xpath("//div[contains(text(), 'IPR_ULEEV')]"));
         params.click();
         params = driver.findElement(By.xpath("//span[contains(text(), 'Карточка для изучения API')]"));
         params.click();
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
-        if ()
-
-
+        if (params.getText().contains("Done")){
+            System.out.println(cardName + " находится в колонке Done");
+        } else {
+            System.out.println(cardName + "не найдена в колонке Done");
+        }
     }
 }
