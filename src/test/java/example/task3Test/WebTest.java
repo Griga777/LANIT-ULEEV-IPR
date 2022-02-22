@@ -50,15 +50,19 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys("iloveMasha*159");
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
+        driver.manage().timeouts().implicitlyWait(10, SECONDS);
     }
 
     private static void сheckCardLocation() {
+        String boardName = "IPR_ULEEV";
         String cardName = "Карточка для изучения API";
 
-        params = driver.findElement(By.xpath("//div[contains(text(), 'IPR_ULEEV')]"));
+        params = driver.findElement(By.xpath("//div[contains(text(), '" + boardName + "')]"));
         params.click();
-        params = driver.findElement(By.xpath("//span[contains(text(), 'Карточка для изучения API')]"));
+        driver.manage().timeouts().implicitlyWait(5, SECONDS);
+        params = driver.findElement(By.xpath("//textarea[text() = 'Done']//following::span[contains(text(), '" + cardName + "')]"));
         params.click();
+        driver.manage().timeouts().implicitlyWait(5, SECONDS);
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
         if (params.getText().contains("Done")){
             System.out.println(cardName + " находится в колонке Done");
