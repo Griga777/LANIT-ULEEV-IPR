@@ -34,6 +34,8 @@ public class WebTest {
         authorizationOnTrelloWebsite();
         сheckCardLocation();
         checkImplementationAllChecklistItems();
+        setCover();
+        MarkWorkDoneOnTime();
 
         try {
             Thread.sleep(5_000);
@@ -50,19 +52,17 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys("iloveMasha*159");
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
-        driver.manage().timeouts().implicitlyWait(10, SECONDS);
     }
 
     private static void сheckCardLocation() {
         String boardName = "IPR_ULEEV";
+        String columnName = "Done";
         String cardName = "Карточка для изучения API";
 
         params = driver.findElement(By.xpath("//div[contains(text(), '" + boardName + "')]"));
         params.click();
-        driver.manage().timeouts().implicitlyWait(5, SECONDS);
-        params = driver.findElement(By.xpath("//textarea[text() = 'Done']//following::span[contains(text(), '" + cardName + "')]"));
+        params = driver.findElement(By.xpath("//textarea[text() = '" + columnName + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::div[@class = 'list-card-details js-card-details']"));
         params.click();
-        driver.manage().timeouts().implicitlyWait(5, SECONDS);
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
         if (params.getText().contains("Done")){
             System.out.println(cardName + " находится в колонке Done");
@@ -72,11 +72,40 @@ public class WebTest {
     }
 
     private static void checkImplementationAllChecklistItems() {
+        String checkitemName1 = "Понять протокол HTTP";
+        String checkitemName2 = "Выучить методы запросов";
+
         params = driver.findElement(By.xpath("//span[@class = 'checklist-progress-percentage js-checklist-progress-percent']"));
         if (params.getText().contains("100%")) {
             System.out.println("Чек-лист выполнен на 100%");
         } else {
             System.out.println("Чек-лист выполнен на " + params.getText());
         }
+        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//preceding::span[@class = 'checklist-item-checkbox-check']"));
+        if (params.isSelected()) {
+            System.out.println("Пункт " + checkitemName1 + " выполнен");
+        } else {
+            System.out.println("Пункт " + checkitemName1 + " не выполнен");
+        }
+        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName2 + "')]//preceding::span[@class = 'checklist-item-checkbox-check'][1]"));
+        if (params.isSelected()) {
+            System.out.println("Пункт " + checkitemName2 + " выполнен");
+        } else {
+            System.out.println("Пункт " + checkitemName2 + " не выполнен");
+        }
+    }
+
+    private static void setCover() {
+        button = driver.findElement(By.xpath("//a[@title = 'Обложка']"));
+        button.click();
+        button = driver.findElement(By.xpath("//button[@class = '_31xT7xOqkxPLkw _1hFyzxe1-LRBw8']"));
+        button.click();
+        params = driver.findElement(By.xpath("//a[@class = 'pop-over-header-close-btn icon-sm icon-close']"));
+        params.click();
+    }
+
+    private static void MarkWorkDoneOnTime() {
+        params = driver.findElement(By.xpath("//span[@class = 'card-detail-badge-due-date-complete-icon']"));
+        params.click();
     }
 }
