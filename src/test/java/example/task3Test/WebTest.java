@@ -2,13 +2,8 @@ package example.task3Test;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-
-import java.util.List;
 
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
@@ -35,7 +30,8 @@ public class WebTest {
         сheckCardLocation();
         checkImplementationAllChecklistItems();
         setCover();
-        MarkWorkDoneOnTime();
+        markWorkDoneOnTime();
+        changeBoardBackground();
 
         try {
             Thread.sleep(5_000);
@@ -104,8 +100,23 @@ public class WebTest {
         params.click();
     }
 
-    private static void MarkWorkDoneOnTime() {
+    private static void markWorkDoneOnTime() {
         params = driver.findElement(By.xpath("//span[@class = 'card-detail-badge-due-date-complete-icon']"));
+        params.click();
+    }
+
+    private static void changeBoardBackground() {
+        params = driver.findElement(By.xpath("//a[@class = 'icon-md icon-close dialog-close-button js-close-window dialog-close-button-dark']"));
+        params.click();
+        params = driver.findElement(By.xpath("//span[@class = 'icon-sm icon-overflow-menu-horizontal board-header-btn-icon']"));
+        params.click();
+        params = driver.findElement(By.xpath("//a[@class = 'board-menu-navigation-item-link js-change-background']//span"));
+        params.click();
+        params = driver.findElement(By.xpath("//div[contains(text(), 'Цвета')]//preceding::div[@class = 'image'][1]"));
+        params.click();
+        params = driver.findElement(By.xpath("//div[@style = 'background-color: rgb(81, 152, 57);']"));
+        params.click();
+        params = driver.findElement(By.xpath("//a[@title = 'Закрыть меню доски.']"));
         params.click();
     }
 }
