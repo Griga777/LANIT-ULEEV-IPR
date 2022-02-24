@@ -2,27 +2,33 @@ package example.task3Test;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
+import java.time.Duration;
 
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
+    private static final String EMAIL = "uleev777@yandex.ru";
+    private static final String PASS = "iloveMasha*159";
     private static WebElement params;
     private static WebElement button;
+
     static {
         System.setProperty("webdriver.chrome.driver", "F:\\Программы\\chromedriver_win32\\chromedriver.exe");
     }
+
     private static WebDriver driver = new ChromeDriver();
 
     public static void main(String[] args) {
 
         try {
             Thread.sleep(3_000);
-        } catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get(BASE_URL);
 
         //запуск методов
@@ -32,22 +38,25 @@ public class WebTest {
         setCover();
         markWorkDoneOnTime();
         changeBoardBackground();
+        changeBoardName();
 
         try {
             Thread.sleep(5_000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.close();
+
+        driver.quit();
     }
 
     private static void authorizationOnTrelloWebsite() {
-        driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys("uleev777@yandex.ru");
+        driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys("iloveMasha*159");
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
+        System.out.println("Авторизация прошла успешна!");
     }
 
     private static void сheckCardLocation() {
@@ -55,12 +64,14 @@ public class WebTest {
         String columnName = "Done";
         String cardName = "Карточка для изучения API";
 
-        params = driver.findElement(By.xpath("//div[contains(text(), '" + boardName + "')]"));
-        params.click();
-        params = driver.findElement(By.xpath("//textarea[text() = '" + columnName + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::div[@class = 'list-card-details js-card-details']"));
-        params.click();
+        driver.findElement(By.xpath("//div[contains(text(), '" + boardName + "')]")).click();
+        System.out.println("Доска " + boardName + " выбрана");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[text() = '" + columnName
+                + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::div[@class = 'list-card-details js-card-details']"))).click();
+        System.out.println(cardName + " выбрана");
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
-        if (params.getText().contains("Done")){
+        if (params.getText().contains("Done")) {
             System.out.println(cardName + " находится в колонке Done");
         } else {
             System.out.println(cardName + " не найдена в колонке Done");
@@ -98,25 +109,31 @@ public class WebTest {
         button.click();
         params = driver.findElement(By.xpath("//a[@class = 'pop-over-header-close-btn icon-sm icon-close']"));
         params.click();
+        System.out.println("Обложка для карточки выбрана");
     }
 
     private static void markWorkDoneOnTime() {
-        params = driver.findElement(By.xpath("//span[@class = 'card-detail-badge-due-date-complete-icon']"));
-        params.click();
+        driver.findElement(By.xpath("//span[@class = 'card-detail-badge-due-date-complete-icon']")).click();
+        System.out.println("Чекбокс Срок активирован");
     }
 
     private static void changeBoardBackground() {
-        params = driver.findElement(By.xpath("//a[@class = 'icon-md icon-close dialog-close-button js-close-window dialog-close-button-dark']"));
-        params.click();
-        params = driver.findElement(By.xpath("//span[@class = 'icon-sm icon-overflow-menu-horizontal board-header-btn-icon']"));
-        params.click();
-        params = driver.findElement(By.xpath("//a[@class = 'board-menu-navigation-item-link js-change-background']//span"));
-        params.click();
-        params = driver.findElement(By.xpath("//div[contains(text(), 'Цвета')]//preceding::div[@class = 'image'][1]"));
-        params.click();
-        params = driver.findElement(By.xpath("//div[@style = 'background-color: rgb(81, 152, 57);']"));
-        params.click();
-        params = driver.findElement(By.xpath("//a[@title = 'Закрыть меню доски.']"));
-        params.click();
+        driver.findElement(By.xpath("//a[@class = 'icon-md icon-close dialog-close-button js-close-window dialog-close-button-dark']")).click();
+        driver.findElement(By.xpath("//span[@class = 'icon-sm icon-overflow-menu-horizontal board-header-btn-icon']")).click();
+        driver.findElement(By.xpath("//a[@class = 'board-menu-navigation-item-link js-change-background']//span")).click();
+        driver.findElement(By.xpath("//div[contains(text(), 'Цвета')]//preceding::div[@class = 'image'][1]")).click();
+        driver.findElement(By.xpath("//div[@style = 'background-color: rgb(81, 152, 57);']")).click();
+        driver.findElement(By.xpath("//a[@title = 'Закрыть меню доски.']")).click();
+        System.out.println("Фон доски изменён");
+    }
+
+    private static void changeBoardName() {
+        String oldBoardName = "IPR_ULEEV";
+        String newBoardName = "Только для образования";
+
+        driver.findElement(By.xpath("//input[@value = '" + oldBoardName + "']")).sendKeys(newBoardName);
+//        params.sendKeys(newBoardName);
+//        params.sendKeys(Keys.ENTER);
+        System.out.println("Имя доски изменено");
     }
 }

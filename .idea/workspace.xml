@@ -151,13 +151,6 @@
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
     </task>
-    <task id="LOCAL-00002" summary="Добавил классы и методы">
-      <created>1642748104982</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1642748104982</updated>
-    </task>
     <task id="LOCAL-00003" summary="Добавил тесты">
       <created>1642748533719</created>
       <option name="number" value="00003" />
@@ -494,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645637233369</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="3 задание в процессе">
+      <created>1645683761242</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1645683761242</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -541,6 +541,26 @@
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="38" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
