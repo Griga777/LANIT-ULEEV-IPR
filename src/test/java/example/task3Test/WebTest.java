@@ -131,7 +131,7 @@ public class WebTest {
         String oldBoardName = "IPR_ULEEV";
         String newBoardName = "Только для образования";
 
-        driver.findElement(By.xpath("//input[@value = '" + oldBoardName + "']")).sendKeys(newBoardName);
+        driver.findElement(By.xpath("//h1[contains(text(), '" + oldBoardName + "')]")).sendKeys(newBoardName, Keys.ENTER);
 //        params.sendKeys(newBoardName);
 //        params.sendKeys(Keys.ENTER);
         System.out.println("Имя доски изменено");
