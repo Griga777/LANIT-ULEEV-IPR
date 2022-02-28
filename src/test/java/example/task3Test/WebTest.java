@@ -120,7 +120,7 @@ public class WebTest {
     private static void changeBoardBackground() {
         driver.findElement(By.xpath("//a[@class = 'icon-md icon-close dialog-close-button js-close-window dialog-close-button-dark']")).click();
         driver.findElement(By.xpath("//span[@class = 'icon-sm icon-overflow-menu-horizontal board-header-btn-icon']")).click();
-        driver.findElement(By.xpath("//a[@class = 'board-menu-navigation-item-link js-change-background']//span")).click();
+        driver.findElement(By.xpath("//a[contains(text(), 'Сменить фон')]")).click();
         driver.findElement(By.xpath("//div[contains(text(), 'Цвета')]//preceding::div[@class = 'image'][1]")).click();
         driver.findElement(By.xpath("//div[@style = 'background-color: rgb(81, 152, 57);']")).click();
         driver.findElement(By.xpath("//a[@title = 'Закрыть меню доски.']")).click();
@@ -131,7 +131,10 @@ public class WebTest {
         String oldBoardName = "IPR_ULEEV";
         String newBoardName = "Только для образования";
 
-        driver.findElement(By.xpath("//h1[contains(text(), '" + oldBoardName + "')]")).sendKeys(newBoardName, Keys.ENTER);
+        driver.findElement(By.xpath("//h1[contains(text(), '" + oldBoardName + "')]")).click();
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//        wait.until(p -> driver.findElement(By.xpath("//h1[contains(text(), '" + oldBoardName + "')]")).getText().contains(newBoardName));
+        driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board is-editing']//h1")).sendKeys(newBoardName, Keys.ENTER);
 //        params.sendKeys(newBoardName);
 //        params.sendKeys(Keys.ENTER);
         System.out.println("Имя доски изменено");
