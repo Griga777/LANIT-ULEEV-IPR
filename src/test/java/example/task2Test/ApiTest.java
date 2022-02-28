@@ -14,26 +14,33 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD = "62132b951bcf405eb6f57746";
-    private static String ID_LIST_BACKLOG = "62132bf80e80b02b8501cbdd";
-    private static String ID_LIST_DONE = "62132bfa2a4f7240926325db";
-    private static String ID_CARD = "62132cbdb8e23b8f6ea577ce";
+    private static String ID_BOARD;
+    private static String ID_LIST_BACKLOG;
+    private static String ID_LIST_DONE;
+    private static String ID_CARD;
     private static String ID_MOVED_CARD;
     private static String ID_ATTACHMENT;
-    private static String ID_CHECKLIST = "62132ddd891b2e7d0cc84aaf";
-    private static String ID_CHECKITEM_FIRST = "62132e1c78374c81c86642a1";
-    private static String ID_CHECKITEM_SECOND = "62132e1ef675438038278fe2";
+    private static String ID_CHECKLIST;
+    private static String ID_CHECKITEM_FIRST;
+    private static String ID_CHECKITEM_SECOND;
     private static String ID_UPDATE_CHECKITEM_FIRST;
     private static String ID_UPDATE_CHECKITEM_SECOND;
     private static String ID_CLOSED_LIST_BACKLOG;
@@ -53,6 +60,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(1)
     public void createNewBoard() {
         Board board = new Board();
         String boardName = "IPR_ULEEV";
@@ -78,6 +86,9 @@ public class ApiTest {
     }
 
     @Test
+    @Order(2)
+    @ParameterizedTest
+    @MethodSource("")
     public void createNewList() {
         List list1 = new List();
         List list2 = new List();
@@ -128,6 +139,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(3)
     public void createNewCard() {
         Card card = new Card();
         String cardName = "Карточка для изучения API";
@@ -158,8 +170,8 @@ public class ApiTest {
     }
 
     @Test
+    @Order(4)
     public void createAttachmentOnCard() {
-        Attachment attachment = new Attachment();
         String attachmentName;
         Path filePath = Paths.get("C:\\Users\\Uleev\\Postman\\files\\FOTO.jpg");
         RestAssuredConfig config = RestAssured.config()
@@ -191,6 +203,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(5)
     public void createChecklist() {
         Checklist checklist = new Checklist();
         String checklistName = "Чек-лист";
@@ -217,6 +230,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(6)
     public void createCheckitemOnChecklist() {
         Checkitem checkitem1 = new Checkitem();
         Checkitem checkitem2 = new Checkitem();
@@ -267,6 +281,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(7)
     public void updateCheckItemOnCard() {
         Checkitem checkitem = new Checkitem();
         String checkitemState = "complete";
@@ -293,6 +308,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(8)
     public void moveCardToAnotherColumn() {
         String idList;
         String actualIdList;
@@ -318,6 +334,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(9)
     public void archiveOrUnarchiveList() {
         List list = new List();
         String listName = "Backlog";
@@ -343,6 +360,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(10)
     public void updateCheckItemOnAnotherCard() {
         Checkitem checkitem = new Checkitem();
         String checkitemState = "complete";
@@ -369,6 +387,7 @@ public class ApiTest {
     }
 
     @Test
+    @Order(11)
     public void createCommentOnCard() {
         String cardComment = ":thumbsup:";
         String actionTypes = "commentCard";
