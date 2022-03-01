@@ -15,18 +15,14 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
 
@@ -48,10 +44,12 @@ public class ApiTest {
 
     @BeforeClass
     public static void prepareRequest() {
+        MyProperties properties = ConfigFactory.create(MyProperties.class);
+
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
-                .addQueryParam("key", "ca92798ed22edd169506048c77755169")
-                .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
+                .addQueryParam("key", properties.key())
+                .addQueryParam("token", properties.token())
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
@@ -87,8 +85,6 @@ public class ApiTest {
 
     @Test
     @Order(2)
-    @ParameterizedTest
-    @MethodSource("")
     public void createNewList() {
         List list1 = new List();
         List list2 = new List();
@@ -144,7 +140,7 @@ public class ApiTest {
         Card card = new Card();
         String cardName = "Карточка для изучения API";
         String cardDescription = "Тут будет отмечаться прогресс обучения";
-        String cardDueDate = "2022-02-22T23:41:00Z";
+        String cardDueDate = "2022-03-10T15:30:00Z";
         card.setName(cardName);
 
         Response cardCreation = given()
