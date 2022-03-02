@@ -58,8 +58,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.createCommentOnCard">
-    <configuration name="ApiTest.archiveOrUnarchiveList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ApiTest.createNewBoard">
+    <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
@@ -69,8 +69,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="archiveOrUnarchiveList" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,7 +90,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.moveCardToAnotherColumn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.createNewBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
@@ -101,7 +100,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="moveCardToAnotherColumn" />
+      <option name="METHOD_NAME" value="createNewBoard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.createNewList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LANIT-ULEEV-IPR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.task2Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
+      <option name="METHOD_NAME" value="createNewList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,29 +138,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.updateCheckItemOnCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LANIT-ULEEV-IPR" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="example.task2Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="example.task2Test" />
-      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="updateCheckItemOnCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.createNewBoard" />
+        <item itemvalue="JUnit.ApiTest.createNewList" />
+        <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.ApiTest.createCommentOnCard" />
         <item itemvalue="JUnit.ApiTest.updateCheckItemOnAnotherCard" />
-        <item itemvalue="JUnit.ApiTest.archiveOrUnarchiveList" />
-        <item itemvalue="JUnit.ApiTest.moveCardToAnotherColumn" />
-        <item itemvalue="JUnit.ApiTest.updateCheckItemOnCard" />
       </list>
     </recent_temporary>
   </component>
@@ -157,13 +156,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00014" summary="2 задание в процессе">
-      <created>1644231264482</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1644231264482</updated>
     </task>
     <task id="LOCAL-00015" summary="2 задание в процессе">
       <created>1644383995900</created>
@@ -501,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646229234149</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="3 задание в процессе">
+      <created>1646245298874</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1646245298874</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

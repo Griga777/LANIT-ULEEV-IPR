@@ -19,14 +19,17 @@ import io.restassured.response.Response;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
 import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
     private static String ID_BOARD = "621faf3cb4d8206550f8a278";
@@ -45,14 +48,14 @@ public class ApiTest {
 
     @BeforeClass
     public static void prepareRequest() {
-//        MyProperties properties = ConfigFactory.create(MyProperties.class);
+        MyProperties properties = ConfigFactory.create(MyProperties.class);
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
-//                .addQueryParam("key", properties.key())
-//                .addQueryParam("token", properties.token())
-                .addQueryParam("key", "ca92798ed22edd169506048c77755169")
-                .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
+                .addQueryParam("key", properties.key())
+                .addQueryParam("token", properties.token())
+//                .addQueryParam("key", "ca92798ed22edd169506048c77755169")
+//                .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
@@ -60,8 +63,8 @@ public class ApiTest {
         RestAssured.filters(new ResponseLoggingFilter());
     }
 
-    @Test
     @Order(1)
+    @Test
     public void createNewBoard() {
         Board board = new Board();
         String boardName = "IPR_ULEEV";
@@ -86,8 +89,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getName(), board.getName());
     }
 
-    @Test
     @Order(2)
+    @Test
     public void createNewList() {
         List list1 = new List();
         List list2 = new List();
@@ -137,8 +140,8 @@ public class ApiTest {
         Assert.assertEquals(actual2.getName(), list2.getName());
     }
 
-    @Test
     @Order(3)
+    @Test
     public void createNewCard() {
         Card card = new Card();
         String cardName = "Карточка для изучения API";
@@ -168,8 +171,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getName(), card.getName());
     }
 
-    @Test
     @Order(4)
+    @Test
     public void createAttachmentOnCard() {
         String attachmentName;
         Path filePath = Paths.get("C:\\Users\\Uleev\\Postman\\files\\FOTO.jpg");
@@ -201,8 +204,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getName(), attachmentName);
     }
 
-    @Test
     @Order(5)
+    @Test
     public void createChecklist() {
         Checklist checklist = new Checklist();
         String checklistName = "Чек-лист";
@@ -228,8 +231,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getName(), checklist.getName());
     }
 
-    @Test
     @Order(6)
+    @Test
     public void createCheckitemOnChecklist() {
         Checkitem checkitem1 = new Checkitem();
         Checkitem checkitem2 = new Checkitem();
@@ -279,8 +282,8 @@ public class ApiTest {
         Assert.assertEquals(actual2.getName(), checkitem2.getName());
     }
 
-    @Test
     @Order(7)
+    @Test
     public void updateCheckItemOnCard() {
         Checkitem checkitem = new Checkitem();
         String checkitemState = "complete";
@@ -306,8 +309,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getState(), checkitem.getState());
     }
 
-    @Test
     @Order(8)
+    @Test
     public void moveCardToAnotherColumn() {
         String idList;
         String actualIdList;
@@ -332,8 +335,8 @@ public class ApiTest {
         Assert.assertEquals(actualIdList, idList);
     }
 
-    @Test
     @Order(9)
+    @Test
     public void archiveOrUnarchiveList() {
         List list = new List();
         String listName = "Backlog";
@@ -358,8 +361,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getName(), list.getName());
     }
 
-    @Test
     @Order(10)
+    @Test
     public void updateCheckItemOnAnotherCard() {
         Checkitem checkitem = new Checkitem();
         String checkitemState = "complete";
@@ -385,8 +388,8 @@ public class ApiTest {
         Assert.assertEquals(actual.getState(), checkitem.getState());
     }
 
-    @Test
     @Order(11)
+    @Test
     public void createCommentOnCard() {
         String cardComment = ":thumbsup:";
         String actionTypes = "commentCard";
