@@ -29,7 +29,7 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD;
+    private static String ID_BOARD = "621f75d7ac62cb54cc176743";
     private static String ID_LIST_BACKLOG;
     private static String ID_LIST_DONE;
     private static String ID_CARD;
@@ -45,12 +45,14 @@ public class ApiTest {
 
     @BeforeClass
     public static void prepareRequest() {
-        MyProperties properties = ConfigFactory.create(MyProperties.class);
+//        MyProperties properties = ConfigFactory.create(MyProperties.class);
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
-                .addQueryParam("key", properties.key())
-                .addQueryParam("token", properties.token())
+//                .addQueryParam("key", properties.key())
+//                .addQueryParam("token", properties.token())
+                .addQueryParam("key", "ca92798ed22edd169506048c77755169")
+                .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)

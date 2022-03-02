@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/MyProperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/MyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/MyProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/MyProperties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/MyProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,18 +52,18 @@
       <recent name="example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\main\resources" />
+      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\main\java\example\task3\trelloWEB" />
+      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\main\java\example" />
       <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test\java\example" />
       <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test\java" />
-      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test\resources" />
-      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test\java\example\task2Test" />
-      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="example" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.createNewBoard">
+  <component name="RunManager" selected="JUnit.ApiTest.createNewList">
     <configuration name="WebTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="example.task3Test.WebTest" />
       <module name="LANIT-ULEEV-IPR" />
@@ -117,17 +124,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.updateCheckItemOnAnotherCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.createNewList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="example.task2Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="updateCheckItemOnAnotherCard" />
+      <option name="METHOD_NAME" value="createNewList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.createNewList" />
         <item itemvalue="JUnit.ApiTest.createNewBoard" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="Application.WebTest" />
         <item itemvalue="JUnit.ApiTest.createCommentOnCard" />
-        <item itemvalue="JUnit.ApiTest.updateCheckItemOnAnotherCard" />
       </list>
     </recent_temporary>
   </component>
@@ -151,13 +158,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00012" summary="2 задание в процессе">
-      <created>1644132506213</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1644132506214</updated>
     </task>
     <task id="LOCAL-00013" summary="2 задание в процессе">
       <created>1644132557895</created>
@@ -495,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646200040561</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="3 задание в процессе">
+      <created>1646200082418</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1646200082418</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
