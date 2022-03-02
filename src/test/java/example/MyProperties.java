@@ -1,4 +1,4 @@
-package example.task2Test;
+package example;
 
 import org.aeonbits.owner.Config;
 

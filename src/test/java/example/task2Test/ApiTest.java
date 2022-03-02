@@ -1,5 +1,6 @@
 package example.task2Test;
 
+import example.MyProperties;
 import example.task2.trelloAPI.attachments.Attachment;
 import example.task2.trelloAPI.boards.Board;
 import example.task2.trelloAPI.cards.Card;
