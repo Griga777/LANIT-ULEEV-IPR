@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MyProperties.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/MyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/MyProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/MyProperties.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/MyProperties.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,31 +58,19 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.createNewList">
-    <configuration name="WebTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="example.task3Test.WebTest" />
+  <component name="RunManager" selected="JUnit.ApiTest.createCommentOnCard">
+    <configuration name="ApiTest.archiveOrUnarchiveList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.task3Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LANIT-ULEEV-IPR" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="example.task2Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="archiveOrUnarchiveList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,7 +79,7 @@
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="example.task2Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.createNewBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.moveCardToAnotherColumn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
@@ -118,13 +101,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="createNewBoard" />
+      <option name="METHOD_NAME" value="moveCardToAnotherColumn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.createNewList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.updateCheckItemOnAnotherCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
@@ -134,7 +117,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="example.task2Test" />
       <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="createNewList" />
+      <option name="METHOD_NAME" value="updateCheckItemOnAnotherCard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.updateCheckItemOnCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LANIT-ULEEV-IPR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.task2Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.task2Test" />
+      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
+      <option name="METHOD_NAME" value="updateCheckItemOnCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.createNewList" />
-        <item itemvalue="JUnit.ApiTest.createNewBoard" />
-        <item itemvalue="JUnit.ApiTest" />
-        <item itemvalue="Application.WebTest" />
         <item itemvalue="JUnit.ApiTest.createCommentOnCard" />
+        <item itemvalue="JUnit.ApiTest.updateCheckItemOnAnotherCard" />
+        <item itemvalue="JUnit.ApiTest.archiveOrUnarchiveList" />
+        <item itemvalue="JUnit.ApiTest.moveCardToAnotherColumn" />
+        <item itemvalue="JUnit.ApiTest.updateCheckItemOnCard" />
       </list>
     </recent_temporary>
   </component>
@@ -158,13 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00013" summary="2 задание в процессе">
-      <created>1644132557895</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1644132557895</updated>
     </task>
     <task id="LOCAL-00014" summary="2 задание в процессе">
       <created>1644231264482</created>
@@ -502,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646200082418</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="3 задание в процессе">
+      <created>1646229234149</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1646229234149</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

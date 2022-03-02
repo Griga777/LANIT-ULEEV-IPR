@@ -29,15 +29,15 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD = "621f75d7ac62cb54cc176743";
-    private static String ID_LIST_BACKLOG;
-    private static String ID_LIST_DONE;
-    private static String ID_CARD;
+    private static String ID_BOARD = "621faf3cb4d8206550f8a278";
+    private static String ID_LIST_BACKLOG = "621faf79cb7a080140d6f912";
+    private static String ID_LIST_DONE = "621faf7ba28317684530b3b1";
+    private static String ID_CARD = "621fb00f2bd59a1591ff00fc";
     private static String ID_MOVED_CARD;
     private static String ID_ATTACHMENT;
-    private static String ID_CHECKLIST;
-    private static String ID_CHECKITEM_FIRST;
-    private static String ID_CHECKITEM_SECOND;
+    private static String ID_CHECKLIST = "621fb2168f1f568a105fdd8b";
+    private static String ID_CHECKITEM_FIRST = "621fb2c051c83f7436185f5b";
+    private static String ID_CHECKITEM_SECOND = "621fb2d19eada37beafc0e50";
     private static String ID_UPDATE_CHECKITEM_FIRST;
     private static String ID_UPDATE_CHECKITEM_SECOND;
     private static String ID_CLOSED_LIST_BACKLOG;
@@ -175,9 +175,9 @@ public class ApiTest {
         Path filePath = Paths.get("C:\\Users\\Uleev\\Postman\\files\\FOTO.jpg");
         RestAssuredConfig config = RestAssured.config()
                 .httpClient(HttpClientConfig.httpClientConfig()
-                        .setParam("http.connection.timeout", 5000)
-                        .setParam("http.socket.timeout", 5000)
-                        .setParam("http.connection-manager.timeout", 5000));
+                        .setParam("http.connection.timeout", 5000000)
+                        .setParam("http.socket.timeout", 5000000)
+                        .setParam("http.connection-manager.timeout", 5000000));
 
         Response attachmentCreation = given()
                 .queryParam("file", filePath)
