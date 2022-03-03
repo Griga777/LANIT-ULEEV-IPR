@@ -1,12 +1,12 @@
 package example.task2Test;
 
-import example.MyProperties;
 import example.task2.trelloAPI.attachments.Attachment;
 import example.task2.trelloAPI.boards.Board;
 import example.task2.trelloAPI.cards.Card;
 import example.task2.trelloAPI.checkItems.Checkitem;
 import example.task2.trelloAPI.checklists.Checklist;
 import example.task2.trelloAPI.lists.List;
+
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.config.HttpClientConfig;
@@ -32,11 +32,11 @@ public class ApiTest {
     private static String ID_LIST_BACKLOG = "621faf79cb7a080140d6f912";
     private static String ID_LIST_DONE = "621faf7ba28317684530b3b1";
     private static String ID_CARD = "621fb00f2bd59a1591ff00fc";
-    private static String ID_MOVED_CARD;
-    private static String ID_ATTACHMENT;
     private static String ID_CHECKLIST = "621fb2168f1f568a105fdd8b";
     private static String ID_CHECKITEM_FIRST = "621fb2c051c83f7436185f5b";
     private static String ID_CHECKITEM_SECOND = "621fb2d19eada37beafc0e50";
+    private static String ID_ATTACHMENT;
+    private static String ID_MOVED_CARD;
     private static String ID_UPDATE_CHECKITEM_FIRST;
     private static String ID_UPDATE_CHECKITEM_SECOND;
     private static String ID_CLOSED_LIST_BACKLOG;

@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/MyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/MyProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/MyProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/MyProperties.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.createNewBoard">
+  <component name="RunManager" selected="JUnit.ApiTest">
     <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
@@ -140,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.createNewBoard" />
         <item itemvalue="JUnit.ApiTest" />
+        <item itemvalue="JUnit.ApiTest.createNewBoard" />
         <item itemvalue="JUnit.ApiTest.createNewList" />
         <item itemvalue="JUnit.ApiTest.createCommentOnCard" />
         <item itemvalue="JUnit.ApiTest.updateCheckItemOnAnotherCard" />
@@ -156,13 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00016" summary="2 задание в процессе">
-      <created>1644559488144</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1644559488144</updated>
     </task>
     <task id="LOCAL-00017" summary="2 задание в процессе">
       <created>1644559802342</created>
@@ -500,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646252669706</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="3 задание в процессе">
+      <created>1646289736542</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1646289736542</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
