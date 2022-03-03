@@ -1,6 +1,5 @@
 package example.task2Test;
 
-import example.task2.trelloAPI.attachments.Attachment;
 import example.task2.trelloAPI.boards.Board;
 import example.task2.trelloAPI.cards.Card;
 import example.task2.trelloAPI.checkItems.Checkitem;
@@ -9,8 +8,6 @@ import example.task2.trelloAPI.lists.List;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.config.HttpClientConfig;
-import io.restassured.config.RestAssuredConfig;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
@@ -20,6 +17,7 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
 import org.junit.jupiter.api.*;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -28,13 +26,13 @@ import static io.restassured.RestAssured.given;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ApiTest {
     private static final String BASE_URL = "https://api.trello.com";
-    private static String ID_BOARD = "621faf3cb4d8206550f8a278";
-    private static String ID_LIST_BACKLOG = "621faf79cb7a080140d6f912";
-    private static String ID_LIST_DONE = "621faf7ba28317684530b3b1";
-    private static String ID_CARD = "621fb00f2bd59a1591ff00fc";
-    private static String ID_CHECKLIST = "621fb2168f1f568a105fdd8b";
-    private static String ID_CHECKITEM_FIRST = "621fb2c051c83f7436185f5b";
-    private static String ID_CHECKITEM_SECOND = "621fb2d19eada37beafc0e50";
+    private static String ID_BOARD;
+    private static String ID_LIST_BACKLOG;
+    private static String ID_LIST_DONE;
+    private static String ID_CARD;
+    private static String ID_CHECKLIST;
+    private static String ID_CHECKITEM_FIRST;
+    private static String ID_CHECKITEM_SECOND;
     private static String ID_ATTACHMENT;
     private static String ID_MOVED_CARD;
     private static String ID_UPDATE_CHECKITEM_FIRST;
@@ -50,8 +48,6 @@ public class ApiTest {
                 .setBaseUri(BASE_URL)
                 .addQueryParam("key", properties.key())
                 .addQueryParam("token", properties.token())
-//                .addQueryParam("key", "ca92798ed22edd169506048c77755169")
-//                .addQueryParam("token", "44962edeb80408666c4dd3ed952a463ad9b4555852c6f779c91f1a9536750777")
                 .setAccept(ContentType.JSON)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
@@ -171,33 +167,29 @@ public class ApiTest {
     @Test
     public void createAttachmentOnCard() {
         String attachmentName;
+        String actualAttachmentName;
         Path filePath = Paths.get("C:\\Users\\Uleev\\Postman\\files\\FOTO.jpg");
-        RestAssuredConfig config = RestAssured.config()
-                .httpClient(HttpClientConfig.httpClientConfig()
-                        .setParam("http.connection.timeout", 5000000)
-                        .setParam("http.socket.timeout", 5000000)
-                        .setParam("http.connection-manager.timeout", 5000000));
 
         Response attachmentCreation = given()
-                .queryParam("file", filePath)
+                .header("Content-Type", "multipart/form-data")
+                .multiPart(new File(String.valueOf(filePath)))
                 .when()
-                .config(config)
                 .post("/1/cards/" + ID_CARD + "/attachments")
                 .then()
                 .statusCode(200)
                 .extract().response();
         ID_ATTACHMENT = attachmentCreation.path("id").toString();
         attachmentName = attachmentCreation.path("name").toString();
-        Attachment actual = given()
+        Response actualAttachmentCreation = given()
                 .pathParam("id", ID_CARD)
                 .pathParam("idAttachment", ID_ATTACHMENT)
                 .when()
                 .get("/1/cards/{id}/attachments/{idAttachment}")
                 .then()
                 .statusCode(200)
-                .extract().body()
-                .as(Attachment.class);
-        Assert.assertEquals(actual.getName(), attachmentName);
+                .extract().response();
+        actualAttachmentName = actualAttachmentCreation.path("name").toString();
+        Assert.assertEquals(actualAttachmentName, attachmentName);
     }
 
     @Order(5)
