@@ -18,11 +18,7 @@ import io.restassured.response.Response;
 
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -46,7 +42,7 @@ public class ApiTest {
     private static String ID_CLOSED_LIST_BACKLOG;
     private static String ID_COMMENT;
 
-    @BeforeClass
+    @BeforeAll
     public static void prepareRequest() {
         MyProperties properties = ConfigFactory.create(MyProperties.class);
 
