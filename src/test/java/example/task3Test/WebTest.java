@@ -28,7 +28,7 @@ public class WebTest {
             e.printStackTrace();
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(BASE_URL);
 
         //запуск методов
@@ -67,7 +67,7 @@ public class WebTest {
         System.out.println("Доска " + boardName + " выбрана");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[text() = '" + columnName
-                + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::div[@class = 'list-card-details js-card-details']"))).click();
+                + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::a[@class = 'list-card js-member-droppable is-covered ui-droppable']"))).click();
         System.out.println(cardName + " выбрана");
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
         if (params.getText().contains("Done")) {
@@ -81,12 +81,6 @@ public class WebTest {
         String checkitemName1 = "Понять протокол HTTP";
         String checkitemName2 = "Выучить методы запросов";
 
-        params = driver.findElement(By.xpath("//span[@class = 'checklist-progress-percentage js-checklist-progress-percent']"));
-        if (params.getText().contains("100%")) {
-            System.out.println("Чек-лист выполнен на 100%");
-        } else {
-            System.out.println("Чек-лист выполнен на " + params.getText());
-        }
         params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//preceding::span[@class = 'checklist-item-checkbox-check']"));
         if (params.isSelected()) {
             System.out.println("Пункт " + checkitemName1 + " выполнен");
@@ -99,10 +93,16 @@ public class WebTest {
         } else {
             System.out.println("Пункт " + checkitemName2 + " не выполнен");
         }
+        params = driver.findElement(By.xpath("//span[@class = 'checklist-progress-percentage js-checklist-progress-percent']"));
+        if (params.getText().contains("100%")) {
+            System.out.println("Чек-лист выполнен на 100%");
+        } else {
+            System.out.println("Чек-лист выполнен на " + params.getText());
+        }
     }
 
     private static void setCover() {
-        button = driver.findElement(By.xpath("//a[@title = 'Обложка']"));
+        button = driver.findElement(By.xpath("//a[@class = 'window-cover-menu-button js-card-cover-chooser']"));
         button.click();
         button = driver.findElement(By.xpath("//button[@class = '_31xT7xOqkxPLkw _1hFyzxe1-LRBw8']"));
         button.click();
@@ -127,15 +127,10 @@ public class WebTest {
     }
 
     private static void changeBoardName() {
-        String oldBoardName = "IPR_ULEEV";
         String newBoardName = "Только для образования";
 
-        driver.findElement(By.xpath("//h1[contains(text(), '" + oldBoardName + "')]")).click();
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-//        wait.until(p -> driver.findElement(By.xpath("//h1[contains(text(), '" + oldBoardName + "')]")).getText().contains(newBoardName));
-        driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board is-editing']//h1")).sendKeys(newBoardName, Keys.ENTER);
-//        params.sendKeys(newBoardName);
-//        params.sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board']")).click();
+        driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board is-editing']//input")).sendKeys(newBoardName, Keys.ENTER);
         System.out.println("Имя доски изменено");
     }
 }
