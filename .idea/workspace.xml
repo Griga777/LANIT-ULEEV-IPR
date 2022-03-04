@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MyProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/MyProperties.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MyProperties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest">
+  <component name="RunManager" selected="Application.WebTest">
+    <configuration name="WebTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="example.task3Test.WebTest" />
+      <module name="LANIT-ULEEV-IPR" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.task3Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
@@ -123,29 +134,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.updateCheckItemOnAnotherCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LANIT-ULEEV-IPR" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="example.task2Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="example.task2Test" />
-      <option name="MAIN_CLASS_NAME" value="example.task2Test.ApiTest" />
-      <option name="METHOD_NAME" value="updateCheckItemOnAnotherCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WebTest" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.ApiTest.createNewBoard" />
         <item itemvalue="JUnit.ApiTest.createNewList" />
         <item itemvalue="JUnit.ApiTest.createCommentOnCard" />
-        <item itemvalue="JUnit.ApiTest.updateCheckItemOnAnotherCard" />
       </list>
     </recent_temporary>
   </component>
@@ -157,13 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00020" summary="2 задание в процессе">
-      <created>1644669467357</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1644669467357</updated>
     </task>
     <task id="LOCAL-00021" summary="2 задание в процессе">
       <created>1644672175973</created>
@@ -501,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646372973949</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="3 задание в процессе">
+      <created>1646400542817</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1646400542817</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -550,37 +545,37 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>139</line>
+          <line>138</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>68</line>
+          <line>67</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>69</line>
+          <line>68</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>70</line>
+          <line>69</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>71</line>
+          <line>70</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>133</line>
+          <line>132</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java</url>
-          <line>136</line>
+          <line>135</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>

@@ -45,7 +45,6 @@ public class WebTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         driver.quit();
     }
 
