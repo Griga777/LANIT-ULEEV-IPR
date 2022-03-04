@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="3 задание в процессе">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MyProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/MyProperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MyProperties.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +48,11 @@
       <recent name="example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test" />
       <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\main\resources" />
       <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\main\java\example" />
       <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\main\java\example\task3\trelloWEB" />
       <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test\java\example" />
-      <recent name="F:\PROJECTS\LANIT-ULEEV-IPR\src\test\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="example" />
@@ -154,13 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00019" summary="2 задание в процессе">
-      <created>1644669412892</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1644669412892</updated>
     </task>
     <task id="LOCAL-00020" summary="2 задание в процессе">
       <created>1644669467357</created>
@@ -498,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646339051876</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="3 задание в процессе">
+      <created>1646372973949</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1646372973949</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
