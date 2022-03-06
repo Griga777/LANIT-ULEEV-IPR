@@ -39,6 +39,7 @@ public class WebTest {
         markWorkDoneOnTime();
         changeBoardBackground();
         changeBoardName();
+        hookAfter();
 
         try {
             Thread.sleep(5_000);
@@ -67,7 +68,7 @@ public class WebTest {
         System.out.println("Доска " + boardName + " выбрана");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[text() = '" + columnName
-                + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::a[@class = 'list-card js-member-droppable is-covered ui-droppable']"))).click();
+                + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::a[contains(@class, 'list-card js-member-droppable')]"))).click();
         System.out.println(cardName + " выбрана");
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
         if (params.getText().contains("Done")) {
@@ -81,14 +82,14 @@ public class WebTest {
         String checkitemName1 = "Понять протокол HTTP";
         String checkitemName2 = "Выучить методы запросов";
 
-        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//preceding::span[@class = 'checklist-item-checkbox-check']"));
-        if (params.isSelected()) {
+        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//ancestor-or-self::div[@class = 'checklist-item no-assignee no-due checklist-item-state-complete']"));
+        if (params.isDisplayed()) {
             System.out.println("Пункт " + checkitemName1 + " выполнен");
         } else {
             System.out.println("Пункт " + checkitemName1 + " не выполнен");
         }
-        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName2 + "')]//preceding::span[@class = 'checklist-item-checkbox-check'][1]"));
-        if (params.isSelected()) {
+        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName2 + "')]//ancestor-or-self::div[@class = 'checklist-item no-assignee no-due checklist-item-state-complete']"));
+        if (params.isDisplayed()) {
             System.out.println("Пункт " + checkitemName2 + " выполнен");
         } else {
             System.out.println("Пункт " + checkitemName2 + " не выполнен");
@@ -132,5 +133,43 @@ public class WebTest {
         driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board']")).click();
         driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board is-editing']//input")).sendKeys(newBoardName, Keys.ENTER);
         System.out.println("Имя доски изменено");
+    }
+
+    private static void hookAfter() {
+        String oldBoardName = "IPR_ULEEV";
+        String columnName = "Done";
+        String cardName = "Карточка для изучения API";
+
+        try {
+            Thread.sleep(5_000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board']")).click();
+        driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board is-editing']//input")).sendKeys(oldBoardName, Keys.ENTER);
+        System.out.println("Имя доски изменено обратно");
+
+        driver.findElement(By.xpath("//span[@class = 'icon-sm icon-overflow-menu-horizontal board-header-btn-icon']")).click();
+        driver.findElement(By.xpath("//div[@style = 'background-color: rgb(0, 121, 191);']")).click();
+        driver.findElement(By.xpath("//a[@title = 'Вернуться.']")).click();
+        driver.findElement(By.xpath("//a[@title = 'Вернуться.']")).click();
+        driver.findElement(By.xpath("//a[@title = 'Закрыть меню доски.']")).click();
+        System.out.println("Фон доски изменён обратно");
+
+        driver.findElement(By.xpath("//textarea[text() = '" + columnName + "']//following::span[contains(text(), '" +
+                cardName + "')]//ancestor-or-self::a[contains(@class, 'list-card js-member-droppable')]")).click();
+        driver.findElement(By.xpath("//span[@class = 'card-detail-badge-due-date-complete-icon']")).click();
+        System.out.println("Чекбокс Срок деактивирован");
+
+        button = driver.findElement(By.xpath("//a[@class = 'window-cover-menu-button js-card-cover-chooser']"));
+        button.click();
+        button = driver.findElement(By.xpath("//button[contains(@style, '/download/FOTO.jpg')]"));
+        button.click();
+        driver.findElement(By.xpath("//a[@class = 'pop-over-header-close-btn icon-sm icon-close']")).click();
+        System.out.println("Обложка для карточки изменена обратно");
+
+        driver.findElement(By.xpath("//a[@class = 'icon-md icon-close dialog-close-button js-close-window dialog-close-button-dark']")).click();
+        driver.findElement(By.xpath("//a[@aria-label = 'Вернуться на главную страницу']")).click();
+        System.out.println("Вернулся на главную страницу");
     }
 }
