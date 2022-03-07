@@ -81,15 +81,16 @@ public class WebTest {
     private static void checkImplementationAllChecklistItems() {
         String checkitemName1 = "Понять протокол HTTP";
         String checkitemName2 = "Выучить методы запросов";
+        String completed = null;
 
-        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//ancestor-or-self::div[@class = 'checklist-item no-assignee no-due checklist-item-state-complete']"));
-        if (params.isDisplayed()) {
+        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//ancestor-or-self::div[contains(@class, 'checklist-item no-assignee no-due" + completed + "')]"));
+        if (completed.contains(" checklist-item-state-complete")) {
             System.out.println("Пункт " + checkitemName1 + " выполнен");
         } else {
             System.out.println("Пункт " + checkitemName1 + " не выполнен");
         }
-        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName2 + "')]//ancestor-or-self::div[@class = 'checklist-item no-assignee no-due checklist-item-state-complete']"));
-        if (params.isDisplayed()) {
+        params = driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName2 + "')]//ancestor-or-self::div[contains(@class, 'checklist-item no-assignee no-due" + completed + "')]"));
+        if (completed.contains(" checklist-item-state-complete")) {
             System.out.println("Пункт " + checkitemName2 + " выполнен");
         } else {
             System.out.println("Пункт " + checkitemName2 + " не выполнен");
