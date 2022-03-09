@@ -1,9 +1,8 @@
 package example.task3Test;
 
+import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -17,16 +16,10 @@ public class WebTest {
     static {
         System.setProperty("webdriver.chrome.driver", "F:\\Программы\\chromedriver_win32\\chromedriver.exe");
     }
-
     private static WebDriver driver = new ChromeDriver();
 
-    public static void main(String[] args) {
-
-        try {
-            Thread.sleep(3_000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    @Test
+    public void siteTrelloWebTests() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(BASE_URL);
@@ -40,13 +33,17 @@ public class WebTest {
         changeBoardBackground();
         changeBoardName();
         hookAfter();
+        sleep();
 
+        driver.quit();
+    }
+
+    private static void sleep() {
         try {
             Thread.sleep(5_000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.quit();
     }
 
     private static void authorizationOnTrelloWebsite() {
@@ -66,9 +63,8 @@ public class WebTest {
 
         driver.findElement(By.xpath("//div[contains(text(), '" + boardName + "')]")).click();
         System.out.println("Доска " + boardName + " выбрана");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[text() = '" + columnName
-                + "']//following::span[contains(text(), '" + cardName + "')]//ancestor-or-self::a[contains(@class, 'list-card js-member-droppable')]"))).click();
+        driver.findElement(By.xpath("//textarea[text() = '" + columnName + "']//following::span[contains(text(), '" + cardName
+                + "')]//ancestor-or-self::a[contains(@class, 'list-card js-member-droppable')]")).click();
         System.out.println(cardName + " выбрана");
         params = driver.findElement(By.xpath("//a[@class = 'js-open-move-from-header']"));
         if (params.getText().contains("Done")) {
@@ -82,15 +78,22 @@ public class WebTest {
         String checkitemName1 = "Понять протокол HTTP";
         String checkitemName2 = "Выучить методы запросов";
 
-        driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName1 + "')]//ancestor-or-self::div[contains(@class, 'checklist-item no-assignee no-due checklist-item-state-complete')]")).isDisplayed();
-        System.out.println("Пункт " + checkitemName1 + " выполнен");
-        driver.findElement(By.xpath("//span[contains(text(), '" + checkitemName2 + "')]//ancestor-or-self::div[contains(@class, 'checklist-item no-assignee no-due checklist-item-state-complete')]")).isDisplayed();
-        System.out.println("Пункт " + checkitemName2 + " выполнен");
+        checkExecutionItem(checkitemName1);
+        checkExecutionItem(checkitemName2);
         params = driver.findElement(By.xpath("//span[@class = 'checklist-progress-percentage js-checklist-progress-percent']"));
         if (params.getText().contains("100%")) {
             System.out.println("Чек-лист выполнен на 100%");
         } else {
             System.out.println("Чек-лист выполнен на " + params.getText());
+        }
+    }
+
+    private static void checkExecutionItem(String item) {
+        WebElement element = driver.findElement(By.xpath("//span[contains(text(), '" + item + "')]//ancestor-or-self::div[contains(@class, 'checklist-item no-assignee no-due')]"));
+        if (element.getAttribute("class").contains("checklist-item-state-complete")) {
+            System.out.println("Пункт " + item + " выполнен");
+        } else {
+            System.out.println("Пункт " + item + " не выполнен");
         }
     }
 
@@ -132,11 +135,7 @@ public class WebTest {
         String columnName = "Done";
         String cardName = "Карточка для изучения API";
 
-        try {
-            Thread.sleep(5_000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep();
         driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board']")).click();
         driver.findElement(By.xpath("//div[@class = 'board-header-btn mod-board-name inline-rename-board js-rename-board is-editing']//input")).sendKeys(oldBoardName, Keys.ENTER);
         System.out.println("Имя доски изменено обратно");
