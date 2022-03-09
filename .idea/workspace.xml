@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="3 задание готово">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task2Test/MyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task2Test/MyProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/ApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task2Test/MyProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task2Test/MyProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00030" summary="2 задание в процессе">
-      <created>1645041360234</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1645041360234</updated>
     </task>
     <task id="LOCAL-00031" summary="2 задание в процессе">
       <created>1645075880237</created>
@@ -500,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646821622959</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="3 задание готово">
+      <created>1646833509593</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1646833509593</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -538,7 +532,8 @@
     <MESSAGE value="2 задание переименовал папку" />
     <MESSAGE value="3 задание добавил зависимость в .pom" />
     <MESSAGE value="3 задание в процессе" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 задание в процессе" />
+    <MESSAGE value="3 задание готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 задание готово" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
