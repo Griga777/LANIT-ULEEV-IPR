@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: example.task2Test.ApiTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.893 s - in example.task2Test.ApiTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.903 s - in example.task2Test.ApiTest
