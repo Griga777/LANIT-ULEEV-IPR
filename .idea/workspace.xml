@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,13 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00034" summary="2 задание в процессе">
-      <created>1645161611231</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1645161611231</updated>
     </task>
     <task id="LOCAL-00035" summary="2 задание в процессе">
       <created>1645218738784</created>
@@ -494,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647451182847</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Fix pom.xml">
+      <created>1647544398161</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1647544398161</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -533,7 +532,8 @@
     <MESSAGE value="3 задание добавил зависимость в .pom" />
     <MESSAGE value="3 задание в процессе" />
     <MESSAGE value="3 задание готово" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 задание готово" />
+    <MESSAGE value="Fix pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
