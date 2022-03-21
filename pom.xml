@@ -197,8 +197,7 @@
                 <configuration>
                     <systemProperties>
                         <property>
-                            <name>allure.results.directory</name>
-                            <value>C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\My_project@2\target\allure-results</value>
+                            <allure.results.directory>${project.build.directory}\target\allure-results</allure.results.directory>
                         </property>
                     </systemProperties>
                 </configuration>
