@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task1Test.OutputHiInMavenConsoleTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task1Test.OutputHiInMavenConsoleTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task2Test.ApiTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task2Test.ApiTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/example.task1Test.OutputHiInMavenConsoleTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/example.task1Test.OutputHiInMavenConsoleTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/example.task2Test.ApiTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/example.task2Test.ApiTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,20 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00051" summary="3 задание в процессе">
-      <created>1645683761242</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1645683761242</updated>
-    </task>
-    <task id="LOCAL-00052" summary="3 задание в процессе">
-      <created>1645734711552</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1645734711552</updated>
     </task>
     <task id="LOCAL-00053" summary="3 задание в процессе">
       <created>1645768454122</created>
@@ -499,7 +479,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647854055140</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Изменил pom.xml">
+      <created>1647858323031</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1647858323031</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Изменил pom.xml">
+      <created>1647858333548</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1647858333548</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
