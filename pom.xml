@@ -197,7 +197,8 @@
                 <configuration>
                     <systemProperties>
                         <property>
-                            <allure.results.directory>${project.build.directory}\target\allure-results</allure.results.directory>
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}\target\allure-results</value>
                         </property>
                     </systemProperties>
                 </configuration>
