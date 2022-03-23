@@ -210,7 +210,7 @@
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
-                            <value>${project.build.directory}\target\target\allure-results</value>
+                            <value>${project.build.directory}\target\allure-results</value>
                         </property>
                     </systemProperties>
                 </configuration>
