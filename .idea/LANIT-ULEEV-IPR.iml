@@ -182,7 +182,6 @@
     <orderEntry type="library" name="Maven: org.sonatype.plexus:plexus-cipher:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-builder-support:3.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-repository-metadata:3.6.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:3.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model-builder:3.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-resolver-provider:3.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.resolver:maven-resolver-impl:1.4.1" level="project" />
@@ -269,10 +268,6 @@
     <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-extensions-spi:3.0.0-M5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-toolchain:3.0-alpha-2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.shared:maven-artifact-transfer:0.11.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.maven.shared:maven-common-artifact-filters:3.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-inject-plexus:1.4.2" level="project" />
-    <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-inject-bean:1.4.2" level="project" />
-    <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-guice:noaop:2.1.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-shared-utils:3.0.0-M4" level="project" />
     <orderEntry type="library" name="Maven: io.github.bonigarcia:webdrivermanager:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.github.docker-java:docker-java:3.2.13" level="project" />
@@ -365,5 +360,13 @@
     <orderEntry type="library" scope="TEST" name="Maven: io.netty:netty-all:4.0.51.Final" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.58" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.lightbody.bmp:mitm:2.1.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-enforcer-plugin:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.enforcer:enforcer-api:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.enforcer:enforcer-rules:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.shared:maven-common-artifact-filters:3.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache-extras.beanshell:bsh:2.0b6" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.shared:maven-dependency-tree:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-compat:3.1.1" level="project" />
   </component>
 </module>
