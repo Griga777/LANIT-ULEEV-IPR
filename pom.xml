@@ -191,9 +191,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <includes>
-                        <include>**/MyTestSuite.class</include>
-                    </includes>
+<!--                    <includes>-->
+<!--                        <include>**/MyTestSuite.class</include>-->
+<!--                    </includes>-->
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                     </argLine>

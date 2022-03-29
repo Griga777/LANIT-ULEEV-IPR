@@ -151,13 +151,6 @@
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
     </task>
-    <task id="LOCAL-00065" summary="3 задание в процессе">
-      <created>1646289736542</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1646289736542</updated>
-    </task>
     <task id="LOCAL-00066" summary="3 задание в процессе">
       <created>1646331055580</created>
       <option name="number" value="00066" />
@@ -494,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648533177705</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Изменил pom.xml">
+      <created>1648551969812</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1648551969812</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -535,9 +535,9 @@
     <MESSAGE value="3 задание готово" />
     <MESSAGE value="Fix pom.xml" />
     <MESSAGE value="Добавил зависимость в pom.xml" />
-    <MESSAGE value="Изменил pom.xml" />
     <MESSAGE value="Изменил pom.xml, добавил класс" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил pom.xml, добавил класс" />
+    <MESSAGE value="Изменил pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменил pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
