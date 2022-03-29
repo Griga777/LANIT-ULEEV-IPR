@@ -5,7 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/example/task1Test/MyTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LANIT-ULEEV-IPR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T21-30-46_735.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T22-40-25_861.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T23-07-58_633.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T23-11-29_659.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T23-29-55_442.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T23-49-54_548.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-17T23-52-17_580.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-18T00-00-24_921.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-18T00-10-53_178.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-18T00-12-34_564.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-18T00-21-15_042.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-18T00-28-17_931.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T10-52-46_612.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T10-55-30_569.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T11-02-51_144.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T11-12-52_437.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T11-16-17_027.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T13-09-54_736-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T13-09-54_736.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T13-11-21_585.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T14-22-35_249.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-21T14-24-37_978.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2022-03-23T17-55-40_884.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task1Test.OutputHiInMavenConsoleTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task1Test.OutputHiInMavenConsoleTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task2Test.ApiTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task2Test.ApiTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-example.task3Test.WebTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/example.task1Test.OutputHiInMavenConsoleTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/example.task1Test.OutputHiInMavenConsoleTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/example.task2Test.ApiTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/example.task2Test.ApiTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/example.task3Test.WebTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/09b79167-63fe-46b8-b2de-c3ec4eb2479a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/14f5a1d5-4378-4e0c-93f6-82f4a04d3dd4-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/190afc78-7d9a-4ee2-a3fc-9ccaf9fe92ed-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/26589d90-5532-4556-a1af-c785d210ae79-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/29a87783-4338-4add-bd76-4765e9c0e10c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/2a1f1f87-64a9-4966-8d37-3391be6e4a1b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/3c2fe70a-fac1-47b0-9e0d-66a5f7946520-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/467a1099-0ac6-4220-9ccb-b45a20c6262e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/543ef121-ed5f-4ca3-8446-f6279af3de13-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/54ff1389-fc4a-4184-8184-dce76ad853fa-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/64b01cf5-666e-4916-929a-7ab8bc572b87-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/6c9f449f-9d6f-485e-9235-f8a49346180b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/9a235511-fa62-4881-a2fc-81bf7bdd0104-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/9d304483-176a-49e8-af99-20a9647b89c4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/9d362398-dd37-4a8d-9bf4-0eb30a393e08-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/a0e49aa2-0e92-477f-8a16-f09d93136c02-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/a2010b47-12e1-4360-919c-6dbbeeebe4a2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/b3faf58d-4cb8-4f6a-9181-72b8f30d6be1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/bd912d21-d564-4b15-aa07-8d44554283f9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/c0f9305a-e66a-4e0d-aa12-6ac42abcf433-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/c839ce26-e886-4006-8f40-3634416ee67b-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/d3201297-4738-472a-8225-330537e537d3-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/dc2ab2a2-58ee-4ca6-9f39-4ff098bc6e6e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/e9f57826-cbc6-4629-82e4-62c6db676c34-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/ea2a9335-1bc8-4bee-99ee-2356105e8e1a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/target/target/allure-results/f669f40c-1bfe-4c7d-88e3-1491bb84d5cf-result.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +76,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -149,13 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00063" summary="3 задание в процессе">
-      <created>1646245298874</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1646245298874</updated>
     </task>
     <task id="LOCAL-00064" summary="3 задание в процессе">
       <created>1646252669706</created>
@@ -493,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648058471590</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Изменил pom.xml">
+      <created>1648058564025</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1648058564025</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

@@ -1,0 +1,5 @@
+example\task1Test\MyTestSuite.class
+example\task2Test\ApiTest.class
+example\task2Test\MyProperties.class
+example\task1Test\OutputHiInMavenConsoleTest.class
+example\task3Test\WebTest.class

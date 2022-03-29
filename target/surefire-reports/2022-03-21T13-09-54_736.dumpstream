@@ -1,4 +1,0 @@
-# Created at 2022-03-21T13:09:55.156
-Boot Manifest-JAR contains absolute paths in classpath 'F:\PROJECTS\LANIT-ULEEV-IPR\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-
