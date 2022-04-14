@@ -144,6 +144,39 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${c3p0.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>${c3p0.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>6.0.0.Alpha7</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>11.1.0.jre17-preview</version>
+        </dependency>
+
     </dependencies>
 
     <properties>
@@ -157,6 +190,10 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <MsSqlDatabaseIP/>
+        <MsSqlDatabaseName/>
+        <c3p0.version>6.0.0.Final</c3p0.version>
 
     </properties>
 
@@ -198,6 +235,10 @@
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                     </argLine>
                     <properties>
+                        <property>
+                            <name>MsSqlDatabaseName</name>
+                            <value>${MsSqlDatabaseName}</value>
+                        </property>
                         <property>
                             <name>listener</name>
                             <value>io.qameta.allure.junit5.AllureJunit5</value>
