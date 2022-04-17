@@ -236,8 +236,8 @@
                     </argLine>
                     <properties>
                         <property>
-                            <name>MsSqlDatabaseName</name>
-                            <value>${MsSqlDatabaseName}</value>
+                            <name>DataBaseName</name>
+                            <value>${DataBaseName}</value>
                         </property>
                         <property>
                             <name>listener</name>
