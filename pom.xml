@@ -171,12 +171,6 @@
             <type>pom</type>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.microsoft.sqlserver</groupId>-->
-<!--            <artifactId>mssql-jdbc</artifactId>-->
-<!--            <version>11.1.0.jre17-preview</version>-->
-<!--        </dependency>-->
-
     </dependencies>
 
     <properties>
