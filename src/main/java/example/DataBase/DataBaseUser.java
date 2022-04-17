@@ -19,7 +19,7 @@ public class DataBaseUser {
 
     public static SessionFactory createSession() {
         try {
-            File file = new File("src/main/resources/config");
+            File file = new File("src/main/resources/config/hibernate.cfg.xml");
             Configuration cfg = new Configuration().configure(file);
             String url = cfg.getProperty("hibernate.connection.url").replace("{host}", CONNECTION_URL);
             cfg.setProperty("hibernate.connection.url", url);
