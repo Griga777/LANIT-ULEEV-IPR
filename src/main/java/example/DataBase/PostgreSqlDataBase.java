@@ -7,7 +7,7 @@ public class PostgreSqlDataBase {
     public static final String PASSWORD;
 
     static {
-        CONNECTION_URL = System.getProperty("PostgreSqlDataBaseIP", "172.16.54.72");
+        CONNECTION_URL = System.getProperty("PostgreSqlDataBaseIP", "localhost");
         DATABASE_NAME = System.getProperty("DataBaseName", "testdb");
         USERNAME = System.getProperty("DataBaseLogin", "postgres");
         PASSWORD =  Base64Util.decodeBase64(System.getProperty("DataBasePassword", "iloveMasha*159"));

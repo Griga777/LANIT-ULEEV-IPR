@@ -171,11 +171,11 @@
             <type>pom</type>
         </dependency>
 
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>11.1.0.jre17-preview</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.microsoft.sqlserver</groupId>-->
+<!--            <artifactId>mssql-jdbc</artifactId>-->
+<!--            <version>11.1.0.jre17-preview</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
@@ -191,8 +191,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <MsSqlDatabaseIP/>
-        <MsSqlDatabaseName/>
+        <PostgreSqlDataBaseIP/>
+        <DataBaseName/>
         <c3p0.version>6.0.0.Final</c3p0.version>
 
     </properties>

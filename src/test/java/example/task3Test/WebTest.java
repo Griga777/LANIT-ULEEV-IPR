@@ -1,15 +1,16 @@
 package example.task3Test;
 
+import example.DataBase.User;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
+import static example.DataBase.TestData.getCurrentUser;
+
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
-    private static final String EMAIL = "uleev777@yandex.ru";
-    private static final String PASS = "iloveMasha*159";
     private static WebElement params;
     private static WebElement button;
 
@@ -17,6 +18,10 @@ public class WebTest {
         System.setProperty("webdriver.chrome.driver", "F:\\Программы\\chromedriver_win32\\chromedriver.exe");
     }
     private static WebDriver driver = new ChromeDriver();
+
+    static User currentUser = getCurrentUser(1);
+    public static String EMAIL = currentUser.getEmail();
+    public static String PASS = currentUser.getPassword();
 
     @Test
     public void siteTrelloWebTests() {
