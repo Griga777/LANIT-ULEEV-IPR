@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/PostgreSqlDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/PostgreSqlDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/PostgreSqlDataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/PostgreSqlDataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,13 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00078" summary="3 задание в процессе">
-      <created>1646821622959</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1646821622959</updated>
     </task>
     <task id="LOCAL-00079" summary="3 задание готово">
       <created>1646833509593</created>
@@ -500,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650261304976</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Правки в классах">
+      <created>1650287900449</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1650287900449</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -548,7 +539,8 @@
     <MESSAGE value="Добавил классы, методы DB" />
     <MESSAGE value="Правки в классах DB" />
     <MESSAGE value="Обновил зависимости" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновил зависимости" />
+    <MESSAGE value="Правки в классах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правки в классах" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
