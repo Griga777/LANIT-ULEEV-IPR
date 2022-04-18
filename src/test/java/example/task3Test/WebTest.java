@@ -4,6 +4,7 @@ import example.DataBase.User;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -16,8 +17,11 @@ public class WebTest {
 
     static {
         System.setProperty("webdriver.chrome.driver", "F:\\Программы\\chromedriver_win32\\chromedriver.exe");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+        driver = new ChromeDriver(chromeOptions);
     }
-    private static WebDriver driver = new ChromeDriver();
+    private static WebDriver driver;
 
     static User currentUser = getCurrentUser(1);
     public static String EMAIL = currentUser.getEmail();

@@ -10,6 +10,6 @@ public class PostgreSqlDataBase {
         CONNECTION_URL = System.getProperty("PostgreSqlDataBaseIP", "localhost");
         DATABASE_NAME = System.getProperty("DataBaseName", "testdb");
         USERNAME = System.getProperty("DataBaseLogin", "postgres");
-        PASSWORD =  Base64Util.decodeBase64(System.getProperty("DataBasePassword", "iloveMasha*159"));
+        PASSWORD = System.getProperty("DataBasePassword", "iloveMasha*159");
     }
 }

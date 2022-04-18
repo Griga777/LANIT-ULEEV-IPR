@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="" />
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/PostgreSqlDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/PostgreSqlDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/PostgreSqlDataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/PostgreSqlDataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,13 +156,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00077" summary="3 задание в процессе">
-      <created>1646804221837</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1646804221838</updated>
     </task>
     <task id="LOCAL-00078" summary="3 задание в процессе">
       <created>1646821622959</created>
@@ -491,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650261224285</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Обновил зависимости">
+      <created>1650261304976</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1650261304976</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
