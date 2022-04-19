@@ -27,9 +27,11 @@ public class DataBaseUser {
             cfg.setProperty("hibernate.connection.password", PASSWORD);
             cfg.setProperty("hibernate.connection.charset", "UTF-8");
             cfg.setProperty("hibernate.connection.characterEncoding", "UTF-8");
+            cfg.setProperty("hibernate.show_sql", "true");
+            cfg.setProperty("hibernate.jdbc.time_zone", "UTC");
+            cfg.setProperty("current_session_context_class", "thread");
+
 //            cfg.setProperty("hibernate.connection.useUnicode", "true");
-//            cfg.setProperty("hibernate.show_sql", "true");
-//            cfg.setProperty("hibernate.jdbc.time_zone", "UTC");
 //            cfg.setProperty("hibernate.archive.autodetection", "class, hbm");
 //            cfg.setProperty("hibernate.useSSL", "false");
 //            cfg.setProperty("hibernate.use_sql_comments", "true");
@@ -38,13 +40,13 @@ public class DataBaseUser {
 //            cfg.setProperty("hibernate.c3p0.max_size", "1");
 //            cfg.setProperty("hibernate.c3p0.max_statements", "500");
 //            cfg.setProperty("hibernate.c3p0.acquire_increment", "1");
-//            cfg.setProperty("current_session_context_class", "thread");
 //            cfg.setProperty("hibernate.c3p0.timeout", "1800");
 //            cfg.setProperty("hibernate.c3p0.acquireRetryDelay", "15000");
 //            cfg.setProperty("hibernate.c3p0.acquireRetryAttempts", "0");
 //            cfg.setProperty("hibernate.c3p0.breakAfterAcquireFailure", "true");
 //            cfg.setProperty("connection.autoReconnect", "true");
 //            cfg.setProperty("connection.autoReconnectForPools", "true");
+
             return cfg.buildSessionFactory();
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
