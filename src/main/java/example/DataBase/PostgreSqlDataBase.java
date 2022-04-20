@@ -8,7 +8,7 @@ public class PostgreSqlDataBase {
 
     static {
         CONNECTION_URL = System.getProperty("PostgreSqlDataBaseIP", "localhost");
-        DATABASE_NAME = System.getProperty("DataBaseName", "testdb");
+        DATABASE_NAME = System.getProperty("DataBaseName", "postgres");
         USERNAME = System.getProperty("DataBaseLogin", "postgres");
         PASSWORD = System.getProperty("DataBasePassword", "iloveMasha*159");
     }
