@@ -13,7 +13,7 @@ public class User {
     @Column(name = "fullName")
     private String fullName;
 
-    @Column(unique = true)
+    @Column(name = "email")
     private String email;
 
     @Column(name = "password")

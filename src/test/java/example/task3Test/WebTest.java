@@ -1,12 +1,13 @@
 package example.task3Test;
 
 import example.DataBase.User;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.Base64;
 
 import static example.DataBase.TestData.getCurrentUser;
 
@@ -24,9 +25,11 @@ public class WebTest {
     }
     private static WebDriver driver;
 
-    static User currentUser = getCurrentUser(1);
+    static User currentUser = getCurrentUser(2);
     public static String EMAIL = currentUser.getEmail();
     public static String PASS = currentUser.getPassword();
+    static byte[] decoded = Base64.getMimeDecoder().decode(PASS);
+    public static String decodedPassword = new String(decoded);
 
     @Test
     public void siteTrelloWebTests() {
@@ -60,7 +63,7 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(decodedPassword);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
         System.out.println("Авторизация прошла успешна!");
