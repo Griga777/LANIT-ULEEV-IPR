@@ -28,8 +28,8 @@ public class WebTest {
     static User currentUser = getCurrentUser(2);
     public static String EMAIL = currentUser.getEmail();
     public static String PASS = currentUser.getPassword();
-    static byte[] decoded = Base64.getMimeDecoder().decode(PASS);
-    public static String decodedPassword = new String(decoded);
+    static byte[] decodedBytes = Base64.getMimeDecoder().decode(PASS);
+    public static String decodedPassword = new String(decodedBytes);
 
     @Test
     public void siteTrelloWebTests() {
