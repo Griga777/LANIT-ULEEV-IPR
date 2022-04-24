@@ -25,11 +25,11 @@ public class WebTest {
     }
     private static WebDriver driver;
 
-    static User currentUser = getCurrentUser(2);
+    static User currentUser = getCurrentUser(1);
     public static String EMAIL = currentUser.getEmail();
     public static String PASS = currentUser.getPassword();
-    static byte[] decodedBytes = Base64.getMimeDecoder().decode(PASS);
-    public static String decodedPassword = new String(decodedBytes);
+//    static byte[] decodedBytes = Base64.getMimeDecoder().decode(PASS);
+//    public static String decodedPassword = new String(decodedBytes);
 
     @Test
     public void siteTrelloWebTests() {
@@ -63,7 +63,7 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(decodedPassword);
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
         System.out.println("Авторизация прошла успешна!");

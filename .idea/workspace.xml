@@ -135,9 +135,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WebTest" />
+        <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.OutputHiInMavenConsoleTest" />
         <item itemvalue="JUnit.WebTest.siteTrelloWebTests" />
-        <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="Application.WebTest" />
       </list>
     </recent_temporary>
@@ -150,27 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Добавил зависимость в pom.xml">
-      <created>1647546932032</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1647546932032</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Добавил зависимость в pom.xml">
-      <created>1647547470607</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1647547470607</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Изменил pom.xml">
-      <created>1647548023375</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1647548023375</updated>
     </task>
     <task id="LOCAL-00089" summary="Изменил pom.xml">
       <created>1647548040272</created>
@@ -494,7 +473,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650663077843</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Правки в классах">
+      <created>1650791455971</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1650791455971</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Правки в классах">
+      <created>1650791466766</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1650791466766</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Правки в классах">
+      <created>1650791475661</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1650791475661</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
