@@ -1,11 +1,13 @@
 package example.task3Test;
 
+import example.DataBase.MD5Util;
 import example.DataBase.User;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 import java.util.Base64;
 
@@ -30,6 +32,15 @@ public class WebTest {
     public static String PASS = currentUser.getPassword();
 //    static byte[] decodedBytes = Base64.getMimeDecoder().decode(PASS);
 //    public static String decodedPassword = new String(decodedBytes);
+//    public static String decodedPassword;
+//
+//    static {
+//        try {
+//            decodedPassword = MD5Util.cryptWithMD5(PASS);
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @Test
     public void siteTrelloWebTests() {
