@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="" />
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,13 +57,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebTest">
-    <configuration name="WebTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="example.task3Test.WebTest" />
+  <component name="RunManager" selected="Application.MD5Util">
+    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="example.DataBase.MD5Util" />
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.task3Test.*" />
+          <option name="PATTERN" value="example.DataBase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MD5Util" />
         <item itemvalue="JUnit.WebTest" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.OutputHiInMavenConsoleTest" />
         <item itemvalue="JUnit.WebTest.siteTrelloWebTests" />
-        <item itemvalue="Application.WebTest" />
       </list>
     </recent_temporary>
   </component>
@@ -147,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Изменил pom.xml">
-      <created>1647608315055</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1647608315055</updated>
     </task>
     <task id="LOCAL-00094" summary="Изменил pom.xml">
       <created>1647610203116</created>
@@ -491,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650863206606</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Правки в классах">
+      <created>1650863305496</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1650863305496</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
