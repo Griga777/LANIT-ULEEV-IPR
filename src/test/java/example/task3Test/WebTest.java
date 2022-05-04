@@ -12,6 +12,7 @@ import java.time.Duration;
 import java.util.Base64;
 
 import static example.DataBase.TestData.getCurrentUser;
+import static org.junit.Assert.assertTrue;
 
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
@@ -27,9 +28,21 @@ public class WebTest {
     }
     private static WebDriver driver;
 
-    static User currentUser = getCurrentUser(1);
+    static User currentUser = getCurrentUser(3);
     public static String EMAIL = currentUser.getEmail();
     public static String PASS = currentUser.getPassword();
+
+    public static String comparePassword() {
+        boolean equal = false;
+        if (MD5Util.encodeBase64("iloveMasha*159").equals(PASS)) {
+            equal = true;
+        }
+        assertTrue("Пароли не равны", equal);
+        return
+    }
+
+
+//    public static String decodedPassword = MD5Util.decodeBase64(PASS);
 //    static byte[] decodedBytes = Base64.getMimeDecoder().decode(PASS);
 //    public static String decodedPassword = new String(decodedBytes);
 //    public static String decodedPassword;
@@ -74,7 +87,7 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(decodedPassword);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
         System.out.println("Авторизация прошла успешна!");

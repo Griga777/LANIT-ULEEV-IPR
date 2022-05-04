@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="Правки в классах">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/LANIT/hpsm_em" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -57,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MD5Util">
+  <component name="RunManager" selected="JUnit.WebTest">
     <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="example.DataBase.MD5Util" />
       <module name="LANIT-ULEEV-IPR" />
@@ -134,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MD5Util" />
         <item itemvalue="JUnit.WebTest" />
+        <item itemvalue="Application.MD5Util" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.OutputHiInMavenConsoleTest" />
         <item itemvalue="JUnit.WebTest.siteTrelloWebTests" />
@@ -150,13 +153,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Изменил pom.xml">
-      <created>1647610203116</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1647610203116</updated>
     </task>
     <task id="LOCAL-00095" summary="Изменил pom.xml">
       <created>1647615551636</created>
@@ -494,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650863305496</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Правки в классах">
+      <created>1650882147902</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1650882147902</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
