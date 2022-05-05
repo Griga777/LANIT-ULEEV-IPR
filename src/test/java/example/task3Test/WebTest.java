@@ -28,18 +28,18 @@ public class WebTest {
     }
     private static WebDriver driver;
 
-    static User currentUser = getCurrentUser(3);
+    static User currentUser = getCurrentUser(5);
     public static String EMAIL = currentUser.getEmail();
     public static String PASS = currentUser.getPassword();
 
-    public static String comparePassword() {
-        boolean equal = false;
-        if (MD5Util.encodeBase64("iloveMasha*159").equals(PASS)) {
-            equal = true;
-        }
-        assertTrue("Пароли не равны", equal);
-        return
-    }
+//    public static String comparePassword() {
+//        boolean equal = false;
+//        if (MD5Util.encodeBase64("iloveMasha*159").equals(PASS)) {
+//            equal = true;
+//        }
+//        assertTrue("Пароли не равны", equal);
+//        return
+//    }
 
 
 //    public static String decodedPassword = MD5Util.decodeBase64(PASS);
@@ -87,7 +87,7 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(decodedPassword);
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
         System.out.println("Авторизация прошла успешна!");

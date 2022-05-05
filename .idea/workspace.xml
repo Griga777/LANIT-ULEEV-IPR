@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="Правки в классах">
+    <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Изменил pom.xml">
-      <created>1647615551636</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1647615551636</updated>
     </task>
     <task id="LOCAL-00096" summary="Изменил pom.xml">
       <created>1647845166292</created>
@@ -497,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650882147902</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Правки в классах">
+      <created>1651676573557</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1651676573557</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
