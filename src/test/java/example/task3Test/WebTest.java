@@ -11,6 +11,7 @@ import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 import java.util.Base64;
 
+import static example.DataBase.DataBaseUser.executeVoidSqlWithDeadlockRetry;
 import static example.DataBase.TestData.getCurrentUser;
 import static org.junit.Assert.assertTrue;
 
@@ -28,9 +29,10 @@ public class WebTest {
     }
     private static WebDriver driver;
 
-    static User currentUser = getCurrentUser(5);
-    public static String EMAIL = currentUser.getEmail();
-    public static String PASS = currentUser.getPassword();
+    static User emailCurrentUser = getCurrentUser(3);
+    public static String EMAIL = emailCurrentUser.getEmail();
+    static String passwordCurrentUser = executeVoidSqlWithDeadlockRetry("");
+    public static String PASS = ("");
 
 //    public static String comparePassword() {
 //        boolean equal = false;
