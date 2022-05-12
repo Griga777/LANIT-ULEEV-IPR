@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +58,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebTest">
+  <component name="RunManager" selected="Application.MD5Util">
     <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="example.DataBase.MD5Util" />
       <module name="LANIT-ULEEV-IPR" />
@@ -135,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WebTest" />
         <item itemvalue="Application.MD5Util" />
+        <item itemvalue="JUnit.WebTest" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.OutputHiInMavenConsoleTest" />
         <item itemvalue="JUnit.WebTest.siteTrelloWebTests" />
@@ -151,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Изменил pom.xml">
-      <created>1647847705285</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1647847705285</updated>
     </task>
     <task id="LOCAL-00099" summary="Изменил pom.xml">
       <created>1647854055140</created>
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651741855113</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="Правки в классах">
+      <created>1652299923033</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1652299923033</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

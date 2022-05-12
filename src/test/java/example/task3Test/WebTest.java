@@ -1,5 +1,6 @@
 package example.task3Test;
 
+import example.DataBase.DataBaseUser;
 import example.DataBase.MD5Util;
 import example.DataBase.User;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ import static org.junit.Assert.assertTrue;
 
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
+    private static final String PASSWORD = "iloveMasha*159";
     private static WebElement params;
     private static WebElement button;
 
@@ -28,11 +30,14 @@ public class WebTest {
         driver = new ChromeDriver(chromeOptions);
     }
     private static WebDriver driver;
-
-    static User emailCurrentUser = getCurrentUser(3);
+    static User emailCurrentUser = getCurrentUser(5);
     public static String EMAIL = emailCurrentUser.getEmail();
-    static String passwordCurrentUser = executeVoidSqlWithDeadlockRetry("");
-    public static String PASS = ("");
+
+    public static void authenticatePassword(String sqlRequest) {
+        String encodedPassword = MD5Util.encodeBase64(PASSWORD);
+        DataBaseUser.executeVoidSqlWithDeadlockRetry("SELECT password FROM users_trello where id = 5");
+        public static String passwordCurrentUser = ("");
+    }
 
 //    public static String comparePassword() {
 //        boolean equal = false;
