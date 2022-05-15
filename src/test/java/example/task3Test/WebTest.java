@@ -1,24 +1,18 @@
 package example.task3Test;
 
-import example.DataBase.DataBaseUser;
-import example.DataBase.MD5Util;
 import example.DataBase.User;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
-import java.util.Base64;
 
-import static example.DataBase.DataBaseUser.executeVoidSqlWithDeadlockRetry;
+import static example.DataBase.Base64Util.decodeBase64;
 import static example.DataBase.TestData.getCurrentUser;
-import static org.junit.Assert.assertTrue;
 
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
-    private static final String PASSWORD = "iloveMasha*159";
     private static WebElement params;
     private static WebElement button;
 
@@ -30,37 +24,10 @@ public class WebTest {
         driver = new ChromeDriver(chromeOptions);
     }
     private static WebDriver driver;
-    static User emailCurrentUser = getCurrentUser(5);
-    public static String EMAIL = emailCurrentUser.getEmail();
-
-    public static void authenticatePassword(String sqlRequest) {
-        String encodedPassword = MD5Util.encodeBase64(PASSWORD);
-        DataBaseUser.executeVoidSqlWithDeadlockRetry("SELECT password FROM users_trello where id = 5");
-        public static String passwordCurrentUser = ("");
-    }
-
-//    public static String comparePassword() {
-//        boolean equal = false;
-//        if (MD5Util.encodeBase64("iloveMasha*159").equals(PASS)) {
-//            equal = true;
-//        }
-//        assertTrue("Пароли не равны", equal);
-//        return
-//    }
-
-
-//    public static String decodedPassword = MD5Util.decodeBase64(PASS);
-//    static byte[] decodedBytes = Base64.getMimeDecoder().decode(PASS);
-//    public static String decodedPassword = new String(decodedBytes);
-//    public static String decodedPassword;
-//
-//    static {
-//        try {
-//            decodedPassword = MD5Util.cryptWithMD5(PASS);
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    static User currentUser = getCurrentUser(5);
+    public static String EMAIL = currentUser.getEmail();
+    public static String PASS = currentUser.getPassword();
+    public static String decodedPassword = decodeBase64(PASS);
 
     @Test
     public void siteTrelloWebTests() {
@@ -94,7 +61,7 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(decodedPassword);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
         System.out.println("Авторизация прошла успешна!");

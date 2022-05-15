@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/Base64Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/DataBaseUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/DataBaseUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/DataBase/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/task3Test/WebTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +62,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MD5Util">
-    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="example.DataBase.MD5Util" />
+  <component name="RunManager" selected="JUnit.WebTest">
+    <configuration name="Base64Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="example.DataBase.Base64Util" />
       <module name="LANIT-ULEEV-IPR" />
       <extension name="coverage">
         <pattern>
@@ -135,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MD5Util" />
         <item itemvalue="JUnit.WebTest" />
+        <item itemvalue="Application.Base64Util" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.OutputHiInMavenConsoleTest" />
         <item itemvalue="JUnit.WebTest.siteTrelloWebTests" />
@@ -151,13 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Изменил pom.xml">
-      <created>1647854055140</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1647854055140</updated>
     </task>
     <task id="LOCAL-00100" summary="Изменил pom.xml">
       <created>1647858323031</created>
@@ -495,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652299923033</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Правки в классах">
+      <created>1652386179402</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1652386179402</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
