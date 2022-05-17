@@ -10,4 +10,9 @@ public class TestData {
         session.getTransaction().commit();
         return user;
     }
+
+    private static String getRequestCurrentUser(String sqlRequest, Integer userId) {
+        String sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
+        return sqlResult;
+    }
 }
