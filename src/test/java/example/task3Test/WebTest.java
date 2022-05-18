@@ -1,5 +1,7 @@
 package example.task3Test;
 
+import example.DataBase.Base64Util;
+import example.DataBase.TestData;
 import example.DataBase.User;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
@@ -7,9 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
-
-import static example.DataBase.Base64Util.decodeBase64;
-import static example.DataBase.TestData.getCurrentUser;
 
 public class WebTest {
     private static final String BASE_URL = "https://trello.com/login";
@@ -24,10 +23,12 @@ public class WebTest {
         driver = new ChromeDriver(chromeOptions);
     }
     private static WebDriver driver;
-    static User currentUser = getCurrentUser(5);
-    public static String EMAIL = currentUser.getEmail();
-    public static String PASS = currentUser.getPassword();
-    public static String decodedPassword = decodeBase64(PASS);
+//    static User currentUser = TestData.getCurrentUser(5);
+//    public static String EMAIL = currentUser.getEmail();
+//    public static String PASS = currentUser.getPassword();
+//    public static String decodedPassword = Base64Util.decodeBase64(PASS);
+    private static String EMAIL = TestData.getResultSQLRequestCurrentUser("SELECT email FROM users_trello WHERE id = 5");
+    private static String PASS = TestData.getResultSQLRequestCurrentUser("SELECT password FROM users_trello WHERE id = 5");
 
     @Test
     public void siteTrelloWebTests() {
@@ -61,7 +62,7 @@ public class WebTest {
         driver.findElement(By.xpath("//input[@placeholder = 'Укажите адрес электронной почты']")).sendKeys(EMAIL);
         button = driver.findElement(By.xpath("//input[@value = 'Войти с помощью Atlassian']"));
         button.click();
-        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(decodedPassword);
+        driver.findElement(By.xpath("//input[@placeholder = 'Введите пароль']")).sendKeys(PASS);
         button = driver.findElement(By.xpath("//button[@id = 'login-submit']"));
         button.click();
         System.out.println("Авторизация прошла успешна!");

@@ -11,8 +11,15 @@ public class TestData {
         return user;
     }
 
-    private static String getRequestCurrentUser(String sqlRequest, Integer userId) {
-        String sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
+    public static String getResultSQLRequestCurrentUser(String sqlRequest) {
+        String sqlResult = null;
+        if (sqlRequest.contains("password")) {
+            sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
+            String decodedPassword = Base64Util.decodeBase64(sqlResult);
+            return decodedPassword;
+        } else {
+            sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
+        }
         return sqlResult;
     }
 }

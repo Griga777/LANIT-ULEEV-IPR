@@ -13,9 +13,4 @@ public class Base64Util {
         String decodedString = new String(decodedBytes);
         return decodedString;
     }
-
-    public static void main(String[] args) {
-        System.out.println(encodeBase64("iloveMasha*159"));
-        System.out.println(decodeBase64("aWxvdmVNYXNoYSoxNTk="));
-    }
 }

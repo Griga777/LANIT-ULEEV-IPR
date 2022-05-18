@@ -69,7 +69,7 @@ public class DataBaseUser {
                     case 0:
                         throw new AssertionError("Нет результатов");
                     default:
-                        list.addAll(Arrays.asList(((Object[]) singleResult)));
+                        list.addAll(Arrays.asList((Object[]) singleResult));
                         break;
                 }
             }
