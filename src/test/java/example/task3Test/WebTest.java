@@ -27,8 +27,8 @@ public class WebTest {
 //    public static String EMAIL = currentUser.getEmail();
 //    public static String PASS = currentUser.getPassword();
 //    public static String decodedPassword = Base64Util.decodeBase64(PASS);
-    private static String EMAIL = TestData.getResultSQLRequestCurrentUser("SELECT email FROM users_trello WHERE id = 5");
-    private static String PASS = TestData.getResultSQLRequestCurrentUser("SELECT password FROM users_trello WHERE id = 5");
+    private static final String EMAIL = TestData.getResultSQLRequestCurrentUser("SELECT email FROM users_trello WHERE id = 1");
+    private static final String PASS = TestData.getResultSQLRequestCurrentUser("SELECT password FROM users_trello WHERE id = 1");
 
     @Test
     public void siteTrelloWebTests() {

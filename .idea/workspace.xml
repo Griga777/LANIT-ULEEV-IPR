@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4148028d-2792-4cce-8371-d2b2a55a58cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/Base64Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/Base64Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/DataBaseUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/DataBase/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DataBase/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/task3Test/WebTest.java" afterDir="false" />
     </list>
@@ -153,20 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642746896211</updated>
-    </task>
-    <task id="LOCAL-00103" summary="Изменил pom.xml">
-      <created>1647864262413</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1647864262413</updated>
-    </task>
-    <task id="LOCAL-00104" summary="Изменил pom.xml">
-      <created>1647969864652</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1647969864652</updated>
     </task>
     <task id="LOCAL-00105" summary="Изменил pom.xml">
       <created>1647973723336</created>
@@ -497,7 +481,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652818462768</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Правки в классах">
+      <created>1652906641378</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1652906641378</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Правки в классах">
+      <created>1652906650231</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1652906650231</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
