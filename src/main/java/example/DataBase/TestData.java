@@ -12,18 +12,11 @@ public class TestData {
     }
 
     public static String getResultSQLRequestCurrentUser(String sqlRequest) {
-        String sqlResult = null;
         if (sqlRequest.contains("password")) {
-            // если пароль захэширован Base64:
-//            sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
-//            String decodedPassword = Base64Util.decodeBase64(sqlResult);
-            // если пароль захэширован bf:
-            sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
-            String decodedPassword = DataBaseUser.getOneStringFromSql("SELECT convert_from(decrypt('" + sqlResult + "', 'my_key', 'bf'), 'sql_ascii')");
-            return decodedPassword;
+            String sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
+            return DataBaseUser.getOneStringFromSql("SELECT convert_from(decrypt('" + sqlResult + "', 'my_key', 'bf'), 'sql_ascii')");
         } else {
-            sqlResult = DataBaseUser.getOneStringFromSql(sqlRequest);
+            return DataBaseUser.getOneStringFromSql(sqlRequest);
         }
-        return sqlResult;
     }
 }

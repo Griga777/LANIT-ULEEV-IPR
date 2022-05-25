@@ -1,8 +1,6 @@
 package example.task3Test;
 
-import example.DataBase.Base64Util;
 import example.DataBase.TestData;
-import example.DataBase.User;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,10 +21,6 @@ public class WebTest {
         driver = new ChromeDriver(chromeOptions);
     }
     private static WebDriver driver;
-//    static User currentUser = TestData.getCurrentUser(5);
-//    public static String EMAIL = currentUser.getEmail();
-//    public static String PASS = currentUser.getPassword();
-//    public static String decodedPassword = Base64Util.decodeBase64(PASS);
     private static final String EMAIL = TestData.getResultSQLRequestCurrentUser("SELECT email FROM users_trello WHERE id = 1");
     private static final String PASS = TestData.getResultSQLRequestCurrentUser("SELECT password FROM users_trello WHERE id = 1");
 
